@@ -10,8 +10,8 @@ export default function Home() {
   return (
     <>
       <h1>Página de inicio TECMD</h1>
-      <Link href="/tecnico-profesional-en-operaciones-de-comercio-electronico">
-        Ir al programa de Comercio Electrónico
+      <Link href="/tecnico-profesional-en-programacion-de-software">
+        Técnico Profesional en Programación de Software
       </Link>
     </>
   );
