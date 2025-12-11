@@ -58,6 +58,40 @@ export default function TecnicoProfesionalPage() {
             </div>
         </div>
     </div>
+
+    <div className="bg-[#F5F5F5] px-2 py-20">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-x-20 gap-y-10">
+            <div className="grid gap-y-2">
+                <h2 className="text-xl text-black">El futuro es digital, Conviértete Técnico Profesional en Programación de Software</h2>
+                <p className="text-black">
+                    El mundo está en constante evolución, el programa <b>Técnico Profesional en Programación 
+                    de Software</b> te prepara para desarrollar aplicaciones y sistemas eficientes, optimizar 
+                    procesos y mejorar la operatividad en distintos entornos. Aprenderás a programar, probar 
+                    y mantener software con metodologías y herramientas actualizadas, respondiendo a la 
+                    creciente demanda de soluciones tecnológicas innovadoras.
+                </p>
+            </div>
+            <div>
+                <div className="bg-white p-5 grid gap-y-2">
+                    <h2 className="text-xl text-black">¿Por qué estudiar este programa?</h2>
+                    <ul className="pl-5 text-black text-sm list-image-[url(/icons/check-icon.svg)]">
+                        <li>
+                            Alta demanda en el mercado laboral debido a la digitalización y automatización.
+                        </li>
+                        <li>
+                            Oportunidad de desarrollar aplicaciones funcionales y adaptables a diversas plataformas.
+                        </li>
+                        <li>
+                            Acceso a conocimientos actualizados sobre tendencias y tecnologías en el desarrollo de software.
+                        </li>
+                        <li>
+                            Posibilidad de crecimiento profesional en distintos sectores de la industria tecnológica.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
     </>
   );
 }
