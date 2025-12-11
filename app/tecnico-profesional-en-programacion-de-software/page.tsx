@@ -10,7 +10,7 @@ export default function TecnicoProfesionalPage() {
   return (
     <main className="min-h-screen px-6 py-10">
       <h1 className="text-3xl font-bold mb-4">
-        Técnico Profesional en Operaciones de Comercio Electrónico
+        Técnico Profesional en Operaciones de Comercio Electrónico.
       </h1>
       <p className="text-lg">
         Aquí puedes colocar toda la información del programa: descripción, objetivos,
