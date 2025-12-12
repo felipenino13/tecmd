@@ -1,6 +1,8 @@
 // app/tecnico-profesional-en-operaciones-de-comercio-electronico/page.tsx
 import type { Metadata } from "next";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "Técnico Profesional en Operaciones de Comercio Electrónico",
@@ -51,7 +53,7 @@ export default function TecnicoProfesionalPage() {
                     </p>
                 </div>
             </div>
-            <div>
+            <div id="formContact">
                 <div className="bg-[#293551] p-10 shadow-md rounded-lg">
                     <p className="text-lg text-white text-center">Solicita más información</p>
                 </div>
@@ -111,6 +113,13 @@ export default function TecnicoProfesionalPage() {
                     educación superior de calidad en Colombia y creemos en que todas 
                     las personas pueden acceder a ella.
                 </p>
+                <div>
+                    <Button>
+                        <Link href="#formContact">
+                            Accede a este subsidio
+                        </Link>
+                    </Button>
+                </div>
             </div>
         </div>
     </div>
@@ -139,6 +148,13 @@ export default function TecnicoProfesionalPage() {
                 <p className="text-black">
                     <b>¡No te quedes atrás en la era digital!</b>
                 </p>
+                <div>
+                    <Button>
+                        <Link href="#formContact">
+                            Solicita más información
+                        </Link>
+                    </Button>
+                </div>
             </div>
             <div className="relative">
                 <div>
@@ -204,8 +220,8 @@ export default function TecnicoProfesionalPage() {
         <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-x-20 gap-y-10">
             <div className="bg-[#293551] p-4 grid gap-y-4 content-between">
                 <div>
-                    <h3 className="text-lg">Financiación</h3>
-                    <p>En TecMD te financiamos el 45% de tu matrícula, además con el apoyo nuestros 
+                    <h3 className="text-lg text-white">Financiación</h3>
+                    <p className="text-white">En TecMD te financiamos el 45% de tu matrícula, además con el apoyo nuestros 
                         aliados financieros puedes comenzar tu Técnico Profesional pagando menos 
                         de $500.000​.
                     </p> 
@@ -219,8 +235,8 @@ export default function TecnicoProfesionalPage() {
             </div>
             <div className="bg-[#293551] p-4 grid gap-y-4 content-between">
                 <div>
-                    <h3 className="text-lg">Modalidad virtual</h3>
-                    <p>¡Estudia a tu propio ritmo! Nuestra modalidad virtual te ofrece la 
+                    <h3 className="text-lg text-white">Modalidad virtual</h3>
+                    <p className="text-white">¡Estudia a tu propio ritmo! Nuestra modalidad virtual te ofrece la 
                         flexibilidad para estudiar mientras trabajas o para equilibrar tu 
                         vida con tus actividades diarias.</p>
                 </div>
@@ -233,8 +249,8 @@ export default function TecnicoProfesionalPage() {
             </div>
             <div className="bg-[#293551] p-4 grid gap-y-4 content-between">
                 <div>
-                    <h3 className="text-lg">Gradúate en menos tiempo</h3>
-                    <p>Estudiar y graduarte como Técnico Profesional en poco tiempo te 
+                    <h3 className="text-lg text-white">Gradúate en menos tiempo</h3>
+                    <p className="text-white">Estudiar y graduarte como Técnico Profesional en poco tiempo te 
                         permite ingresar al mundo laboral más rápido, impulsando tu carrera 
                         sin perder años de preparación. Aprovecha la oportunidad de avanzar 
                         rápidamente hacia tu futuro.</p>
@@ -299,6 +315,92 @@ export default function TecnicoProfesionalPage() {
                 </div>
                 <p className="text-black">Revisa tu correo para información sobre clases, 
                     calendario y usuario institucional.</p>
+            </div>
+        </div>
+        <div className="max-w-5xl mx-auto grid grid-cols-1 gap-x-20 py-4">
+            <div className="justify-center flex">
+                    <Button>
+                        <Link href="#formContact">
+                            Solicita más información
+                        </Link>
+                    </Button>
+                </div>
+        </div>
+    </div>
+
+    <div className="bg-[#FFFFFF] px-2 py-20">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 gap-x-20 py-4">
+            <h2 className="text-black text-xl text-center">Opciones de financiación</h2>
+        </div>
+        <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-x-10 gap-y-10">
+            <div className="grid gap-y-2">
+                <p className="text-4xl text-black text-center">45%</p>
+                <p className="text-black text-center">En TecMD, apostamos por el futuro de Colombia y subsidiamos el 45% de tu matrícula.​</p>
+            </div>
+            <div className="grid gap-y-2">
+                <p className="text-4xl text-black text-center">$500,000</p>
+                <p className="text-black text-center">Gracias a Credity, puedes comenzar tu Técnico Profesional pagando menos de $500.000​.​</p>
+            </div>
+            <div className="grid gap-y-2">
+                <p className="text-4xl text-black text-center">3</p>
+                <p className="text-black text-center">Si necesitas financiar el saldo, tenemos tres aliados confiables con opciones flexibles.​​</p>
+            </div>
+        </div>
+        <div className="max-w-5xl mx-auto grid grid-cols-1 gap-x-20 py-4">
+            <div className="justify-center flex">
+                    <Button>
+                        <Link href="#formContact">
+                            ¿Quieres saber más? Empieza hoy
+                        </Link>
+                    </Button>
+                </div>
+        </div>
+    </div>
+
+    <div className="bg-[#FFCB29] px-2 py-20">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-x-20 gap-y-10">
+            <div className="content-center grid gap-y-2">
+                <h2 className="text-black text-lg">Plan de estudios</h2>
+                <p className="text-black">
+                    ¡Descubre todo lo que tenemos preparado para ti! Accede a una guía 
+                    completa que te ayudará a conocer el contenido y la estructura de 
+                    tu formación. ¡No pierdas la oportunidad de empezar a planificar 
+                    tu camino hacia el éxito!
+                </p>
+                <div className="flex gap-2">
+                    <Button>
+                        <Link href="#formContact">
+                            Más información
+                        </Link>
+                    </Button>
+                    <Button variant="outline">
+                        <Link href="#formContact">
+                            Plan de estudios
+                        </Link>
+                    </Button>
+                </div>
+            </div>
+            <div>
+                <Image
+                src="/images/Buho-circulo.png"   // ruta relativa a /public
+                alt="Estudiantes del programa técnico profesional en operaciones de comercio electrónico"
+                width={500}            // ancho real de la imagen
+                height={300}            // alto real de la imagen
+                /> 
+            </div>
+        </div>
+    </div>
+
+    <div className="bg-[#0F192A] px-2 py-20">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 gap-x-20 gap-y-10">
+            <div className="flex justify-center">
+                <Image
+                src="/logos/logos-TEC-MD-yellow_pq.png"   // ruta relativa a /public
+                alt="Estudiantes del programa técnico profesional en operaciones de comercio electrónico"
+                width={160}            // ancho real de la imagen
+                height={300}            // alto real de la imagen
+                priority                // solo si es imagen principal above the fold
+                />
             </div>
         </div>
     </div>
