@@ -13,7 +13,16 @@ import {
   FieldSeparator,
   FieldSet,
 } from "@/components/ui/field";
-import { Input } from "@/components/ui/input"
+import { Input } from "@/components/ui/input";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
 
 export const metadata: Metadata = {
   title: "Técnico Profesional en Operaciones de Comercio Electrónico",
@@ -30,17 +39,17 @@ export default function TecnicoProfesionalPage() {
     </div>
 
     <div className="bg-[#212844] px-2 py-20">
-        <div className="max-w-5xl mx-auto">
-            <Image
-                src="/logos/logos-TEC-MD-yellow_pq.png"   // ruta relativa a /public
-                alt="Estudiantes del programa técnico profesional en operaciones de comercio electrónico"
-                width={160}            // ancho real de la imagen
-                height={300}            // alto real de la imagen
-                priority                // solo si es imagen principal above the fold
-            />
-        </div>
         <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-x-20 gap-y-10">
-            <div className="grid gap-y-4">
+            <div className="grid gap-y-4 content-center">
+                <div>
+                    <Image
+                        src="/logos/logos-TEC-MD-yellow_pq.png"   // ruta relativa a /public
+                        alt="Estudiantes del programa técnico profesional en operaciones de comercio electrónico"
+                        width={160}            // ancho real de la imagen
+                        height={300}            // alto real de la imagen
+                        priority                // solo si es imagen principal above the fold
+                    />
+                </div>
                 <div>
                     <h1 className="text-5xl text-white">Técnico Profesional en Programación de Software</h1>
                     <p className="text-base text-white">Desarrolla código, resuelve problemas y lidera en la transformación social a través del software</p>
@@ -50,8 +59,8 @@ export default function TecnicoProfesionalPage() {
                     <p className="text-sm rounded-xl px-2 py-1 border border-white text-white">65 Créditos</p>
                     <p className="text-sm rounded-xl px-2 py-1 border border-white text-white">100% Virtual</p>
                 </div>
-                <p className="text-white">
-                    $2.560.000 Precio Ministerio de Educación Nacional (MEN)
+                <p className="text-white text-lg">
+                    $2.560.000 <span className="text-sm">Precio Ministerio de Educación Nacional (MEN)</span>
                 </p>
                 <p className="text-[#D5A202]">
                     Matrícula con subsidio: <span className="text-2xl text-white">$1.417.000</span>    
@@ -65,12 +74,12 @@ export default function TecnicoProfesionalPage() {
                 </div>
             </div>
             <div id="formContact">
-                <div className="bg-[#293551] p-10 shadow-md rounded-lg">
+                <div className="bg-[#293551] p-10 shadow-md rounded-lg grid gap-y-4">
                     <p className="text-lg text-white text-center font-bold">Solicita más información</p>
                     <form action="">
                         <FieldGroup>
-                            <FieldSet>
-                                <FieldGroup className="grid grid-cols-1 sm:grid-cols-2 gap-x-4">
+                            <FieldSet className="grid gap-y-3">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4">
                                     <Field>
                                         <FieldLabel className="text-white" htmlFor="name">
                                             Nombre(s)*
@@ -91,10 +100,74 @@ export default function TecnicoProfesionalPage() {
                                             required
                                         />
                                     </Field>
-                                </FieldGroup>
+                                </div>
+                                <div className="grid grid-cols-1 gap-x-4">
+                                    <Field>
+                                        <FieldLabel className="text-white" htmlFor="phone">
+                                            Teléfono Celular*
+                                        </FieldLabel>
+                                        <Input className="bg-[#FFFFFF]"
+                                            id="phone"
+                                            placeholder="310 2345678"
+                                            required
+                                        />
+                                    </Field>
+                                </div>
+                                <div className="grid grid-cols-1 gap-x-4">
+                                    <Field>
+                                        <FieldLabel className="text-white" htmlFor="email">
+                                            Email*
+                                        </FieldLabel>
+                                        <Input className="bg-[#FFFFFF]"
+                                            id="email"
+                                            placeholder="email@dominio.com"
+                                            required
+                                        />
+                                    </Field>
+                                </div>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4">
+                                    <Field>
+                                        <Select>
+                                            <FieldLabel className="text-white" htmlFor="tipoDocumento">
+                                            Tipo de documento*
+                                            </FieldLabel>
+                                            <SelectTrigger className="w-[180px] bg-[#FFFFFF]">
+                                                <SelectValue placeholder="Selecciona un tipo de documento" />
+                                            </SelectTrigger>
+                                            <SelectContent>
+                                                <SelectGroup>
+                                                <SelectLabel>Tipo de documento</SelectLabel>
+                                                <SelectItem value="Cédula de ciudadanía">Cédula de ciudadanía</SelectItem>
+                                                <SelectItem value="Tarjeta de identidad">Tarjeta de identidad</SelectItem>
+                                                <SelectItem value="Tarjeta de identidad">Tarjeta de identidad</SelectItem>
+                                                <SelectItem value="Pasaporte">Cédula de extranjería</SelectItem>
+                                                <SelectItem value="Permiso de Protección Temporal">Permiso de Protección Temporal</SelectItem>
+                                                </SelectGroup>
+                                            </SelectContent>
+                                            </Select>
+                                    </Field>
+                                    <Field>
+                                        <FieldLabel className="text-white" htmlFor="documento">
+                                            Número de identificación*
+                                        </FieldLabel>
+                                        <Input className="bg-[#FFFFFF]"
+                                            id="documento"
+                                            placeholder="1012345678"
+                                            required
+                                        />
+                                    </Field>
+                                </div>
                                 <Button>
-                                    Submit
+                                    Solicitar información
                                 </Button>
+                                <div>
+                                    <p className="text-xs text-center text-white">
+                                        Al hacer click en ‘Solicito Información’, autorizo ser contactado para 
+                                        recibir información sobre mi inscripción y programas educativos. Nos 
+                                        comprometemos a no utilizar su información de contacto para enviar spam. 
+                                        Consulta nuestras Políticas.
+                                    </p>
+                                </div>
                             </FieldSet>
                         </FieldGroup>
                     </form>
@@ -106,7 +179,7 @@ export default function TecnicoProfesionalPage() {
     <div className="bg-[#F5F5F5] px-2 py-20">
         <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-x-20 gap-y-10">
             <div className="grid gap-y-2">
-                <h2 className="text-xl text-black font-bold">El futuro es digital, Conviértete Técnico Profesional en Programación de Software</h2>
+                <h2 className="text-2xl text-black font-bold">El futuro es digital, Conviértete Técnico Profesional en Programación de Software</h2>
                 <p className="text-black">
                     El mundo está en constante evolución, el programa <b>Técnico Profesional en Programación 
                     de Software</b> te prepara para desarrollar aplicaciones y sistemas eficientes, optimizar 
@@ -148,7 +221,7 @@ export default function TecnicoProfesionalPage() {
                 />
             </div>
             <div className="grid gap-y-2 content-center">
-                <h2 className="text-xl text-black">¿Te interesa nuestro Subsidio del 45%?</h2>
+                <h2 className="text-xl text-black font-bold">¿Te interesa nuestro Subsidio del 45%?</h2>
                 <p className="text-black">
                     ¡Todos nuestros programas cuentan con subsidio para que estudies 
                     fácilmente el programa que quieres! Estamos comprometidos con la 
@@ -169,7 +242,7 @@ export default function TecnicoProfesionalPage() {
     <div className="bg-[#FFFFFF] px-2 py-20">
         <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-x-20 gap-y-10">
             <div className="content-center grid gap-y-2">
-                <h2 className="text-xl text-black">¿Qué lograrás con esta formación?</h2>
+                <h2 className="text-xl text-black font-bold">¿Qué lograrás con esta formación?</h2>
                 <ul className="pl-5 text-black text-sm list-image-[url(/icons/check-icon.svg)]">
                         <li>
                             Escribir código eficiente y estructurado para diferentes aplicaciones.
@@ -227,7 +300,7 @@ export default function TecnicoProfesionalPage() {
 
             </div>
             <div className="content-center grid gap-y-2 p-10">
-                <h2 className="text-xl text-black">Podrás desempeñarte como:</h2>
+                <h2 className="text-xl text-black font-bold">Podrás desempeñarte como:</h2>
                 <ul className="pl-5 text-black text-sm list-image-[url(/icons/check-icon.svg)]">
                         <li>
                             Desarrollador de aplicaciones móviles.
@@ -257,12 +330,12 @@ export default function TecnicoProfesionalPage() {
 
     <div className="bg-[#212844] px-2 py-20">
         <div className="max-w-5xl mx-auto grid grid-cols-1 gap-x-20 py-4">
-            <h2 className="text-white text-xl text-center">Beneficios de estudiar con nosotros</h2>
+            <h2 className="text-white text-xl text-center font-bold">Beneficios de estudiar con nosotros</h2>
         </div>
         <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-x-20 gap-y-10">
             <div className="bg-[#293551] p-4 grid gap-y-4 content-between">
                 <div>
-                    <h3 className="text-lg text-white">Financiación</h3>
+                    <h3 className="text-lg text-white font-bold">Financiación</h3>
                     <p className="text-white">En TecMD te financiamos el 45% de tu matrícula, además con el apoyo nuestros 
                         aliados financieros puedes comenzar tu Técnico Profesional pagando menos 
                         de $500.000​.
@@ -277,7 +350,7 @@ export default function TecnicoProfesionalPage() {
             </div>
             <div className="bg-[#293551] p-4 grid gap-y-4 content-between">
                 <div>
-                    <h3 className="text-lg text-white">Modalidad virtual</h3>
+                    <h3 className="text-lg text-white font-bold">Modalidad virtual</h3>
                     <p className="text-white">¡Estudia a tu propio ritmo! Nuestra modalidad virtual te ofrece la 
                         flexibilidad para estudiar mientras trabajas o para equilibrar tu 
                         vida con tus actividades diarias.</p>
@@ -291,7 +364,7 @@ export default function TecnicoProfesionalPage() {
             </div>
             <div className="bg-[#293551] p-4 grid gap-y-4 content-between">
                 <div>
-                    <h3 className="text-lg text-white">Gradúate en menos tiempo</h3>
+                    <h3 className="text-lg text-white font-bold">Gradúate en menos tiempo</h3>
                     <p className="text-white">Estudiar y graduarte como Técnico Profesional en poco tiempo te 
                         permite ingresar al mundo laboral más rápido, impulsando tu carrera 
                         sin perder años de preparación. Aprovecha la oportunidad de avanzar 
@@ -309,7 +382,7 @@ export default function TecnicoProfesionalPage() {
 
     <div className="bg-[#F5F5F5] px-2 py-20">
         <div className="max-w-5xl mx-auto grid grid-cols-1 gap-x-20 py-4">
-            <h2 className="text-black text-xl text-center">Conoce nuestro proceso de inscripción</h2>
+            <h2 className="text-black text-xl text-center font-bold">Conoce nuestro proceso de inscripción</h2>
         </div>
         <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-5 gap-x-5 gap-y-10">
             <div className="bg-[#FFFFFF] p-4 grid gap-y-4 content-start">
@@ -372,7 +445,7 @@ export default function TecnicoProfesionalPage() {
 
     <div className="bg-[#FFFFFF] px-2 py-20">
         <div className="max-w-5xl mx-auto grid grid-cols-1 gap-x-20 py-4">
-            <h2 className="text-black text-xl text-center">Opciones de financiación</h2>
+            <h2 className="text-black text-xl text-center font-bold">Opciones de financiación</h2>
         </div>
         <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-x-10 gap-y-10">
             <div className="grid gap-y-2">
@@ -402,7 +475,7 @@ export default function TecnicoProfesionalPage() {
     <div className="bg-[#FFCB29] px-2 py-20">
         <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-x-20 gap-y-10">
             <div className="content-center grid gap-y-2">
-                <h2 className="text-black text-lg">Plan de estudios</h2>
+                <h2 className="text-black text-lg font-bold">Plan de estudios</h2>
                 <p className="text-black">
                     ¡Descubre todo lo que tenemos preparado para ti! Accede a una guía 
                     completa que te ayudará a conocer el contenido y la estructura de 
@@ -433,13 +506,13 @@ export default function TecnicoProfesionalPage() {
         </div>
     </div>
 
-    <div className="bg-[#0F192A] px-2 py-20">
+    <div className="bg-[#0F192A] px-2 py-10">
         <div className="max-w-5xl mx-auto grid grid-cols-1 gap-x-20 gap-y-10">
             <div className="flex justify-center">
                 <Image
                 src="/logos/logos-TEC-MD-yellow_pq.png"   // ruta relativa a /public
                 alt="Estudiantes del programa técnico profesional en operaciones de comercio electrónico"
-                width={160}            // ancho real de la imagen
+                width={140}            // ancho real de la imagen
                 height={300}            // alto real de la imagen
                 priority                // solo si es imagen principal above the fold
                 />
