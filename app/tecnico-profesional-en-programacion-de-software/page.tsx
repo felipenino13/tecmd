@@ -190,7 +190,7 @@ export default function TecnicoProfesionalPage() {
             </div>
             <div>
                 <div className="bg-white p-5 grid gap-y-2">
-                    <h2 className="text-xl text-black font-bold">¿Por qué estudiar este programa?</h2>
+                    <h2 className="text-2xl text-black font-bold">¿Por qué estudiar este programa?</h2>
                     <ul className="pl-5 text-black text-sm list-image-[url(/icons/check-icon.svg)]">
                         <li>
                             Alta demanda en el mercado laboral debido a la digitalización y automatización.
@@ -221,7 +221,7 @@ export default function TecnicoProfesionalPage() {
                 />
             </div>
             <div className="grid gap-y-2 content-center">
-                <h2 className="text-xl text-black font-bold">¿Te interesa nuestro Subsidio del 45%?</h2>
+                <h2 className="text-2xl text-black font-bold">¿Te interesa nuestro Subsidio del 45%?</h2>
                 <p className="text-black">
                     ¡Todos nuestros programas cuentan con subsidio para que estudies 
                     fácilmente el programa que quieres! Estamos comprometidos con la 
@@ -242,7 +242,7 @@ export default function TecnicoProfesionalPage() {
     <div className="bg-[#FFFFFF] px-2 py-20">
         <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-x-20 gap-y-10">
             <div className="content-center grid gap-y-2">
-                <h2 className="text-xl text-black font-bold">¿Qué lograrás con esta formación?</h2>
+                <h2 className="text-2xl text-black font-bold">¿Qué lograrás con esta formación?</h2>
                 <ul className="pl-5 text-black text-sm list-image-[url(/icons/check-icon.svg)]">
                         <li>
                             Escribir código eficiente y estructurado para diferentes aplicaciones.
@@ -300,7 +300,7 @@ export default function TecnicoProfesionalPage() {
 
             </div>
             <div className="content-center grid gap-y-2 p-10">
-                <h2 className="text-xl text-black font-bold">Podrás desempeñarte como:</h2>
+                <h2 className="text-2xl text-black font-bold">Podrás desempeñarte como:</h2>
                 <ul className="pl-5 text-black text-sm list-image-[url(/icons/check-icon.svg)]">
                         <li>
                             Desarrollador de aplicaciones móviles.
@@ -330,7 +330,7 @@ export default function TecnicoProfesionalPage() {
 
     <div className="bg-[#212844] px-2 py-20">
         <div className="max-w-5xl mx-auto grid grid-cols-1 gap-x-20 py-4">
-            <h2 className="text-white text-xl text-center font-bold">Beneficios de estudiar con nosotros</h2>
+            <h2 className="text-2xl text-white text-center font-bold">Beneficios de estudiar con nosotros</h2>
         </div>
         <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-x-20 gap-y-10">
             <div className="bg-[#293551] p-4 grid gap-y-4 content-between">
@@ -382,18 +382,18 @@ export default function TecnicoProfesionalPage() {
 
     <div className="bg-[#F5F5F5] px-2 py-20">
         <div className="max-w-5xl mx-auto grid grid-cols-1 gap-x-20 py-4">
-            <h2 className="text-black text-xl text-center font-bold">Conoce nuestro proceso de inscripción</h2>
+            <h2 className="text-2xl text-black text-center font-bold">Conoce nuestro proceso de inscripción</h2>
         </div>
         <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-5 gap-x-5 gap-y-10">
             <div className="bg-[#FFFFFF] p-4 grid gap-y-4 content-start">
                 <div className="flex aspect-[1/1] bg-[#FFCB29] max-w-[40] rounded-[100] content-center">
-                    <p className="text-white text-center w-full m-auto">1</p>
+                    <p className="text-2xl text-white text-center w-full m-auto">1</p>
                 </div>
                 <p className="text-black">Diligencia el formulario</p>
             </div>
             <div className="bg-[#FFFFFF] p-4 grid gap-y-4 content-start">
                 <div className="flex aspect-[1/1] bg-[#FF2C2C] max-w-[40] rounded-[100] content-center">
-                    <p className="text-white text-center w-full m-auto">2</p>
+                    <p className="text-2xl text-white text-center w-full m-auto">2</p>
                 </div>
                 <p className="text-black">Reúne estos documentos:</p>
                 <ul className="pl-5 text-black text-sm list-image-[url(/icons/check-icon.svg)]">
@@ -413,20 +413,20 @@ export default function TecnicoProfesionalPage() {
             </div>
             <div className="bg-[#FFFFFF] p-4 grid gap-y-4 content-start">
                 <div className="flex aspect-[1/1] bg-[#C62868] max-w-[40] rounded-[100] content-center">
-                    <p className="text-white text-center w-full m-auto">3</p>
+                    <p className=" text-2xl text-white text-center w-full m-auto">3</p>
                 </div>
                 <p className="text-black">El Departamento de Admisiones revisará tu inscripción.</p>
             </div>
             <div className="bg-[#FFFFFF] p-4 grid gap-y-4 content-start">
                 <div className="flex aspect-[1/1] bg-[#8E258C] max-w-[40] rounded-[100] content-center">
-                    <p className="text-white text-center w-full m-auto">4</p>
+                    <p className="text-2xl text-white text-center w-full m-auto">4</p>
                 </div>
                 <p className="text-black">Realiza el pago en línea por PSE o de forma presencial en el 
                     Banco de Bogotá y envía el comprobante a tu asesor educativo por correo.</p>
             </div>
             <div className="bg-[#FFFFFF] p-4 grid gap-y-4 content-start">
                 <div className="flex aspect-[1/1] bg-[#212844] max-w-[40] rounded-[100] content-center">
-                    <p className="text-white text-center w-full m-auto">5</p>
+                    <p className="text-2xl text-white text-center w-full m-auto">5</p>
                 </div>
                 <p className="text-black">Revisa tu correo para información sobre clases, 
                     calendario y usuario institucional.</p>
@@ -445,7 +445,7 @@ export default function TecnicoProfesionalPage() {
 
     <div className="bg-[#FFFFFF] px-2 py-20">
         <div className="max-w-5xl mx-auto grid grid-cols-1 gap-x-20 py-4">
-            <h2 className="text-black text-xl text-center font-bold">Opciones de financiación</h2>
+            <h2 className="text-2xl text-black text-xl text-center font-bold">Opciones de financiación</h2>
         </div>
         <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-x-10 gap-y-10">
             <div className="grid gap-y-2">
@@ -475,7 +475,7 @@ export default function TecnicoProfesionalPage() {
     <div className="bg-[#FFCB29] px-2 py-20">
         <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-x-20 gap-y-10">
             <div className="content-center grid gap-y-2">
-                <h2 className="text-black text-lg font-bold">Plan de estudios</h2>
+                <h2 className="text-2xl text-black font-bold">Plan de estudios</h2>
                 <p className="text-black">
                     ¡Descubre todo lo que tenemos preparado para ti! Accede a una guía 
                     completa que te ayudará a conocer el contenido y la estructura de 
