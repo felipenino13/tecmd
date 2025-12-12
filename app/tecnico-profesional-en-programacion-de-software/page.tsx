@@ -2,7 +2,18 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import Link from "next/link"
+import Link from "next/link";
+/*import { Spinner } from "@/components/ui/spinner"*/
+import {
+  Field,
+  FieldDescription,
+  FieldGroup,
+  FieldLabel,
+  FieldLegend,
+  FieldSeparator,
+  FieldSet,
+} from "@/components/ui/field";
+import { Input } from "@/components/ui/input"
 
 export const metadata: Metadata = {
   title: "Técnico Profesional en Operaciones de Comercio Electrónico",
@@ -55,7 +66,38 @@ export default function TecnicoProfesionalPage() {
             </div>
             <div id="formContact">
                 <div className="bg-[#293551] p-10 shadow-md rounded-lg">
-                    <p className="text-lg text-white text-center">Solicita más información</p>
+                    <p className="text-lg text-white text-center font-bold">Solicita más información</p>
+                    <form action="">
+                        <FieldGroup>
+                            <FieldSet>
+                                <FieldGroup className="grid grid-cols-1 sm:grid-cols-2 gap-x-4">
+                                    <Field>
+                                        <FieldLabel className="text-white" htmlFor="name">
+                                            Nombre(s)*
+                                        </FieldLabel>
+                                        <Input className="bg-[#FFFFFF]"
+                                            id="name"
+                                            placeholder="Nombres"
+                                            required
+                                        />
+                                    </Field>
+                                    <Field>
+                                        <FieldLabel className="text-white" htmlFor="apellidos">
+                                            Apellido(s)*
+                                        </FieldLabel>
+                                        <Input className="bg-[#FFFFFF]"
+                                            id="apellidos"
+                                            placeholder="Apellidos"
+                                            required
+                                        />
+                                    </Field>
+                                </FieldGroup>
+                                <Button>
+                                    Submit
+                                </Button>
+                            </FieldSet>
+                        </FieldGroup>
+                    </form>
                 </div>
             </div>
         </div>
@@ -64,7 +106,7 @@ export default function TecnicoProfesionalPage() {
     <div className="bg-[#F5F5F5] px-2 py-20">
         <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-x-20 gap-y-10">
             <div className="grid gap-y-2">
-                <h2 className="text-xl text-black">El futuro es digital, Conviértete Técnico Profesional en Programación de Software</h2>
+                <h2 className="text-xl text-black font-bold">El futuro es digital, Conviértete Técnico Profesional en Programación de Software</h2>
                 <p className="text-black">
                     El mundo está en constante evolución, el programa <b>Técnico Profesional en Programación 
                     de Software</b> te prepara para desarrollar aplicaciones y sistemas eficientes, optimizar 
@@ -75,7 +117,7 @@ export default function TecnicoProfesionalPage() {
             </div>
             <div>
                 <div className="bg-white p-5 grid gap-y-2">
-                    <h2 className="text-xl text-black">¿Por qué estudiar este programa?</h2>
+                    <h2 className="text-xl text-black font-bold">¿Por qué estudiar este programa?</h2>
                     <ul className="pl-5 text-black text-sm list-image-[url(/icons/check-icon.svg)]">
                         <li>
                             Alta demanda en el mercado laboral debido a la digitalización y automatización.
