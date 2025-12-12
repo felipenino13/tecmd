@@ -119,6 +119,7 @@ export default function TecnicoProfesionalPage() {
                                             Email*
                                         </FieldLabel>
                                         <Input className="bg-[#FFFFFF]"
+                                            type="email"
                                             id="email"
                                             placeholder="email@dominio.com"
                                             required
@@ -139,7 +140,6 @@ export default function TecnicoProfesionalPage() {
                                                 <SelectLabel>Tipo de documento</SelectLabel>
                                                 <SelectItem value="Cédula de ciudadanía">Cédula de ciudadanía</SelectItem>
                                                 <SelectItem value="Tarjeta de identidad">Tarjeta de identidad</SelectItem>
-                                                <SelectItem value="Tarjeta de identidad">Tarjeta de identidad</SelectItem>
                                                 <SelectItem value="Pasaporte">Cédula de extranjería</SelectItem>
                                                 <SelectItem value="Permiso de Protección Temporal">Permiso de Protección Temporal</SelectItem>
                                                 </SelectGroup>
@@ -154,6 +154,22 @@ export default function TecnicoProfesionalPage() {
                                             id="documento"
                                             placeholder="1012345678"
                                             required
+                                        />
+                                    </Field>
+                                </div>
+                                <div className="grid grid-cols-1 sm:grid-cols-2">
+                                    <Field>
+                                        <Input
+                                            type="hidden"
+                                            id="programa"
+                                            value="Tecnico"
+                                        />
+                                    </Field>
+                                    <Field>
+                                        <Input
+                                            type="hidden"
+                                            id="medioContanto"
+                                            value="whatsapp"
                                         />
                                     </Field>
                                 </div>
