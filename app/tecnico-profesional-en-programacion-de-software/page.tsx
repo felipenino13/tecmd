@@ -180,7 +180,7 @@ export default function TecnicoProfesionalPage() {
                                         />
                                     </Field>
                                 </div>
-                                <Button className="text-lg my-1 bg-[#ffc316] hover:bg-[#ffcf45] text-black hover:text-black">
+                                <Button className="min-h-[44px] px-4 py-3 text-lg my-1 bg-[#ffc316] hover:bg-[#ffcf45] text-black hover:text-black">
                                     Solicitar información
                                 </Button>
                                 <div>
@@ -257,7 +257,7 @@ export default function TecnicoProfesionalPage() {
                     las personas pueden acceder a ella.
                 </p>
                 <div>
-                    <Button className="text-lg my-2">
+                    <Button className="min-h-[44px] px-4 py-3 text-lg my-2">
                         <Link href="#formContact">
                             Accede a este subsidio
                         </Link>
@@ -292,7 +292,7 @@ export default function TecnicoProfesionalPage() {
                     <b>¡No te quedes atrás en la era digital!</b>
                 </p>
                 <div>
-                    <Button className="text-lg my-2">
+                    <Button className="min-h-[44px] px-4 py-3 text-lg my-2">
                         <Link href="#formContact">
                             Solicita más información
                         </Link>
@@ -462,7 +462,7 @@ export default function TecnicoProfesionalPage() {
         </div>
         <div className="max-w-5xl mx-auto grid grid-cols-1 gap-x-20 py-4">
             <div className="justify-center flex">
-                    <Button className="text-lg my-2">
+                    <Button className="min-h-[44px] px-4 py-3 text-lg my-2">
                         <Link href="#formContact">
                             Solicita más información
                         </Link>
@@ -491,7 +491,7 @@ export default function TecnicoProfesionalPage() {
         </div>
         <div className="max-w-5xl mx-auto grid grid-cols-1 gap-x-20 py-4">
             <div className="justify-center flex">
-                    <Button className="text-lg my-2">
+                    <Button className="min-h-[44px] px-4 py-3 text-lg my-2">
                         <Link href="#formContact">
                             ¿Quieres saber más? Empieza hoy
                         </Link>
@@ -511,12 +511,12 @@ export default function TecnicoProfesionalPage() {
                     tu camino hacia el éxito!
                 </p>
                 <div className="flex gap-2">
-                    <Button className="text-lg my-2">
+                    <Button className="min-h-[44px] px-4 py-3 text-lg my-2">
                         <Link href="#formContact">
                             Más información
                         </Link>
                     </Button>
-                    <Button className="text-lg my-2" variant="outline">
+                    <Button className="min-h-[44px] px-4 py-3 text-lg my-2" variant="outline">
                         <a 
                         download="TecMD Programación-de-Software.pdf"
                         href="pdfs/FLYER-ACADEMICO-2024-Programación-de-Software.pdf"
