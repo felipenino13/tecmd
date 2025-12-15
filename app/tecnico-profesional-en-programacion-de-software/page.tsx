@@ -33,13 +33,22 @@ export const metadata: Metadata = {
 export default function TecnicoProfesionalPage() {
   return (
     <>
-    <div className="bg-[#FFCB29] p-2">
+    <div className="bg-[#FFCB29] p-2 z-20">
         <div className="max-w-5xl mx-auto">
             <p className="text-black text-center text-sm">Toma una decisión inTECligente. <strong>Inscríbete hoy y empieza a construir tu futuro</strong></p>
         </div>
     </div>
 
-    <div className="bg-[#212844] bg-[url(/images/Tecnico-Profesional-en-Programacion-de-Software.webp)] bg-cover">
+    <div className="bg-[#212844] relative overflow-hidden">
+        {/* ✅ Imagen real para LCP */}
+        <Image
+            src="/images/Tecnico-Profesional-en-Programacion-de-Software.webp"
+            alt="Técnico Profesional en Programación de Software"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+        />
         <div className="bg-[#212844]/50 backdrop-blur-lg px-2 py-20">
             <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-x-20 gap-y-10">
             <div className="grid gap-y-4 content-center">
