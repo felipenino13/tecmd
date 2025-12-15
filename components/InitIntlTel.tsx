@@ -18,7 +18,7 @@ export default function InitIntlTel() {
       iti = intlTelInput(input, {
         formatAsYouType: true,
         separateDialCode: true,
-        initialCountry: "auto",
+        initialCountry: "co",
         strictMode: true,
         utilsScript:
           "https://cdn.jsdelivr.net/npm/intl-tel-input@23.7.3/build/js/utils.js",
