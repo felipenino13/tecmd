@@ -139,7 +139,7 @@ export default function TecnicoProfesionalPage() {
                                             <FieldLabel className="text-white" htmlFor="tipoDocumento">
                                             Tipo de documento*
                                             </FieldLabel>
-                                            <SelectTrigger className="w-[180px] bg-[#FFFFFF]">
+                                            <SelectTrigger aria-label="Tipo documento" className="w-[180px] bg-[#FFFFFF]">
                                                 <SelectValue placeholder="Selecciona un tipo de documento" />
                                             </SelectTrigger>
                                             <SelectContent>
