@@ -22,7 +22,9 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select"
+} from "@/components/ui/select";
+import IntlPhoneInput from "@/components/IntlPhoneInput";
+
 
 export const metadata: Metadata = {
   title: "Técnico Profesional en Operaciones de Comercio Electrónico",
@@ -110,8 +112,12 @@ export default function TecnicoProfesionalPage() {
                                             id="phone"
                                             placeholder="310 2345678"
                                             required
+                                            name="phone_e164" 
                                         />
                                     </Field>
+                                    <IntlPhoneInput 
+                                        name="phone_e164"
+                                    />
                                 </div>
                                 <div className="grid grid-cols-1 gap-x-4">
                                     <Field>
@@ -181,7 +187,11 @@ export default function TecnicoProfesionalPage() {
                                         Al hacer click en ‘Solicito Información’, autorizo ser contactado para 
                                         recibir información sobre mi inscripción y programas educativos. Nos 
                                         comprometemos a no utilizar su información de contacto para enviar spam. 
-                                        Consulta nuestras Políticas.
+                                        Consulta nuestras 
+                                        <a className="text-blue-600 underline"
+                                        download="Politica Tratamiento Informacion.pdf"
+                                        href="pdfs/Politica_Tratamiento_Informacion.pdf"
+                                        > Políticas.</a>
                                     </p>
                                 </div>
                             </FieldSet>
@@ -465,15 +475,15 @@ export default function TecnicoProfesionalPage() {
         </div>
         <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-x-10 gap-y-10">
             <div className="grid gap-y-2">
-                <p className="text-4xl text-black text-center">45%</p>
+                <p className="text-6xl text-black text-center">45%</p>
                 <p className="text-black text-center">En TecMD, apostamos por el futuro de Colombia y subsidiamos el 45% de tu matrícula.​</p>
             </div>
             <div className="grid gap-y-2">
-                <p className="text-4xl text-black text-center">$500,000</p>
+                <p className="text-6xl text-black text-center">$500,000</p>
                 <p className="text-black text-center">Gracias a Credity, puedes comenzar tu Técnico Profesional pagando menos de $500.000​.​</p>
             </div>
             <div className="grid gap-y-2">
-                <p className="text-4xl text-black text-center">3</p>
+                <p className="text-6xl text-black text-center">3</p>
                 <p className="text-black text-center">Si necesitas financiar el saldo, tenemos tres aliados confiables con opciones flexibles.​​</p>
             </div>
         </div>
@@ -505,9 +515,12 @@ export default function TecnicoProfesionalPage() {
                         </Link>
                     </Button>
                     <Button variant="outline">
-                        <Link href="#formContact">
+                        <a 
+                        download="TecMD Programación-de-Software.pdf"
+                        href="pdfs/FLYER-ACADEMICO-2024-Programación-de-Software.pdf"
+                        >
                             Plan de estudios
-                        </Link>
+                        </a>
                     </Button>
                 </div>
             </div>
@@ -535,6 +548,7 @@ export default function TecnicoProfesionalPage() {
             </div>
         </div>
     </div>
+
     </>
   );
 }
