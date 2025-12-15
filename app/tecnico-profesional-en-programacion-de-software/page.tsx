@@ -113,6 +113,8 @@ export default function TecnicoProfesionalPage() {
                                             required
                                             type="tel"
                                             maxLength={10}
+                                            inputMode="tel"
+                                            autoComplete="tel"
                                         />
                                         <InitIntlTel />
                                     </Field>

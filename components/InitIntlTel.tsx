@@ -16,8 +16,10 @@ export default function InitIntlTel() {
       const intlTelInput = (mod as any).default as any;
 
       iti = intlTelInput(input, {
+        formatAsYouType: true,
         separateDialCode: true,
         initialCountry: "auto",
+        strictMode: true,
         utilsScript:
           "https://cdn.jsdelivr.net/npm/intl-tel-input@23.7.3/build/js/utils.js",
         geoIpLookup: (callback: (countryCode: string) => void) => {
