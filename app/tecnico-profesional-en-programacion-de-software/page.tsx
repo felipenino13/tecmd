@@ -112,6 +112,7 @@ export default function TecnicoProfesionalPage() {
                                             placeholder="310 2345678"
                                             required
                                             type="tel"
+                                            maxLength={10}
                                         />
                                         <InitIntlTel />
                                     </Field>

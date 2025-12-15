@@ -16,6 +16,7 @@ export default function InitIntlTel() {
       const intlTelInput = (mod as any).default as any;
 
       iti = intlTelInput(input, {
+        formatAsYouType: "true",
         separateDialCode: true,
         initialCountry: "auto",
         strictMode: true,

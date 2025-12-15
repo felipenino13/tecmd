@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,6 +29,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+
+        <Script
+          src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/84c87fc8-5087-4014-afc7-dd897223b353-loader.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
