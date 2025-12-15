@@ -111,7 +111,7 @@ export default function TecnicoProfesionalPage() {
                                             id="form-field-phone"
                                             placeholder="310 2345678"
                                             required
-                                            type="tel"
+                                            type="text"
                                             maxLength={10}
                                             inputMode="tel"
                                             autoComplete="tel"
