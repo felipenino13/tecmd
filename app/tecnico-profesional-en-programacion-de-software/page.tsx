@@ -23,6 +23,9 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
+
 import InitIntlTel from "@/components/InitIntlTel";
 
 export const metadata: Metadata = {
@@ -87,7 +90,7 @@ export default function TecnicoProfesionalPage() {
             <div id="formContact">
                 <div className="bg-[#293551] p-10 shadow-md rounded-lg grid gap-y-4">
                     <p className="text-lg text-white text-center font-bold">Solicita más información</p>
-                    <form action="">
+                    <form id="formLanding" action="">
                         <FieldGroup>
                             <FieldSet className="grid gap-y-3">
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4">
@@ -118,7 +121,7 @@ export default function TecnicoProfesionalPage() {
                                             Teléfono Celular*
                                         </FieldLabel>
                                         <Input className="bg-[#FFFFFF]"
-                                            id="form-field-phone"
+                                            id="phone"
                                             placeholder="310 2345678"
                                             required
                                             type="tel"
@@ -179,7 +182,7 @@ export default function TecnicoProfesionalPage() {
                                         <Input
                                             type="hidden"
                                             id="programa"
-                                            value="Tecnico"
+                                            value="Programación de Software"
                                         />
                                     </Field>
                                     <Field>
@@ -189,8 +192,26 @@ export default function TecnicoProfesionalPage() {
                                             value="whatsapp"
                                         />
                                     </Field>
+                                    <Field>
+                                        <Input
+                                            type="hidden"
+                                            id="financiacion"
+                                            value="Tal vez"
+                                        />
+                                    </Field>
+                                    <Field className="hidden">
+                                        <Checkbox 
+                                            id="politicas" 
+                                            name="form_fields[politicas]"
+                                            defaultChecked
+                                        />
+                                        <Label htmlFor="terms">Accept terms and conditions</Label>
+                                    </Field>
                                 </div>
-                                <Button className="min-h-[44px] px-4 py-3 text-lg my-1 bg-[#ffc316] hover:bg-[#ffcf45] text-black hover:text-black">
+                                <Button 
+                                    className="min-h-[44px] px-4 py-3 text-lg my-1 bg-[#ffc316] hover:bg-[#ffcf45] text-black hover:text-black"
+                                    type="submit"
+                                >
                                     Solicitar información
                                 </Button>
                                 <div>

@@ -7,7 +7,7 @@ export default function InitIntlTel() {
     let iti: any;
 
     const init = async () => {
-      const input = document.querySelector<HTMLInputElement>("#form-field-phone");
+      const input = document.querySelector<HTMLInputElement>("#phone");
       const hidden = document.querySelector<HTMLInputElement>("#phone_e164");
 
       if (!input) return;
