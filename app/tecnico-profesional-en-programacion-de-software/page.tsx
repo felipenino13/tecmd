@@ -187,12 +187,13 @@ export default function TecnicoProfesionalPage() {
                                     <p className="text-xs text-center text-white">
                                         Al hacer click en ‘Solicito Información’, autorizo ser contactado para 
                                         recibir información sobre mi inscripción y programas educativos. Nos 
-                                        comprometemos a no utilizar su información de contacto para enviar spam. 
-                                        Consulta nuestras 
-                                        <a className="text-blue-600 underline"
+                                        comprometemos a no utilizar su información de contacto para enviar spam.&ensp;
+                                        <a className="text-[#ffc316] underline"
                                         download="Politica Tratamiento Informacion.pdf"
                                         href="pdfs/Politica_Tratamiento_Informacion.pdf"
-                                        > Políticas.</a>
+                                        > 
+                                        Consulta nuestras Políticas.
+                                        </a>
                                     </p>
                                 </div>
                             </FieldSet>
