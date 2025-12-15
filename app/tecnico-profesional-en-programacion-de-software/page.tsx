@@ -153,6 +153,7 @@ export default function TecnicoProfesionalPage() {
                                         <NativeSelect
                                             className="bg-white"
                                             id="tipoDocumento"
+                                            name="tipoDocumento"
                                             required
                                         >
                                             <NativeSelectOption value="Cédula de ciudadanía">Cédula de ciudadanía</NativeSelectOption>
