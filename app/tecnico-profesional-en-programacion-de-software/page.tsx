@@ -46,7 +46,7 @@ export default function TecnicoProfesionalPage() {
             alt="Técnico Profesional en Programación de Software"
             fill
             priority
-            sizes="100vw"
+            sizes="(max-width: 768px) 100vw, 1200px"
             className="object-cover"
         />
         <div className="bg-[#212844]/50 backdrop-blur-lg px-2 py-20">
@@ -58,7 +58,7 @@ export default function TecnicoProfesionalPage() {
                         alt="Estudiantes del programa técnico profesional en operaciones de comercio electrónico"
                         width={160}            // ancho real de la imagen
                         height={95.41}            // alto real de la imagen
-                        //priority                // solo si es imagen principal above the fold
+                        priority                // solo si es imagen principal above the fold
                     />
                 </div>
                 <div>
