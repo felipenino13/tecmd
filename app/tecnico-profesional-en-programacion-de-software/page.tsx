@@ -39,8 +39,9 @@ export default function TecnicoProfesionalPage() {
         </div>
     </div>
 
-    <div className="bg-[#212844] px-2 py-20">
-        <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-x-20 gap-y-10">
+    <div className="bg-[#212844] bg-[url(/images/Tecnico-Profesional-en-Programacion-de-Software.webp)] bg-cover">
+        <div className="bg-[#212844]/50 backdrop-blur-lg px-2 py-20">
+            <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-x-20 gap-y-10">
             <div className="grid gap-y-4 content-center">
                 <div>
                     <Image
@@ -111,23 +112,10 @@ export default function TecnicoProfesionalPage() {
                                             id="form-field-phone"
                                             placeholder="310 2345678"
                                             required
-                                            type="text"
+                                            type="tel"
                                             maxLength={10}
                                             inputMode="tel"
                                             autoComplete="tel"
-                                            onPaste={(e) => {
-                                                // NO bloquear pegar: solo normaliza lo pegado a dígitos
-                                                const text = e.clipboardData.getData("text");
-                                                const cleaned = text.replace(/[^\d]/g, "");
-                                                e.preventDefault();
-
-                                                const el = e.currentTarget;
-                                                const start = el.selectionStart ?? el.value.length;
-                                                const end = el.selectionEnd ?? el.value.length;
-
-                                                el.value = el.value.slice(0, start) + cleaned + el.value.slice(end);
-                                                el.dispatchEvent(new Event("input", { bubbles: true }));
-                                            }}
                                         />
                                         <InitIntlTel />
                                     </Field>
@@ -214,6 +202,8 @@ export default function TecnicoProfesionalPage() {
                     </form>
                 </div>
             </div>
+        </div>
+
         </div>
     </div>
 
@@ -321,7 +311,7 @@ export default function TecnicoProfesionalPage() {
                     height={300}            // alto real de la imagen
                     />
                 </div>
-                <div className="absolute bottom-0 left-0 bg-white m-5 p-5 max-w-2xs grid gap-y-2">
+                <div className="absolute bottom-0 left-0 m-5 p-5 max-w-2xs grid gap-y-2 bg-white/50 backdrop-blur-md">
                     <p className="text-black text-sm">
                         Conviértete en Técnico Profesional en Programación de Software 
                         y prepárate para una carrera llena de oportunidades.
