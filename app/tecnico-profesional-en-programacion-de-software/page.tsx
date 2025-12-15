@@ -544,7 +544,7 @@ export default function TecnicoProfesionalPage() {
                 src="/logos/logos-TEC-MD-yellow_pq.png"   // ruta relativa a /public
                 alt="Estudiantes del programa técnico profesional en operaciones de comercio electrónico"
                 width={140}            // ancho real de la imagen
-                height={300}            // alto real de la imagen
+                height={83.49}            // alto real de la imagen
                 priority                // solo si es imagen principal above the fold
                 />
             </div>
