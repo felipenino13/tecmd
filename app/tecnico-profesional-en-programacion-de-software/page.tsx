@@ -58,7 +58,7 @@ export default function TecnicoProfesionalPage() {
                         alt="Estudiantes del programa técnico profesional en operaciones de comercio electrónico"
                         width={160}            // ancho real de la imagen
                         height={95.41}            // alto real de la imagen
-                        priority                // solo si es imagen principal above the fold
+                        //priority                // solo si es imagen principal above the fold
                     />
                 </div>
                 <div>
