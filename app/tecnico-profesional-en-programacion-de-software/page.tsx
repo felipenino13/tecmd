@@ -23,8 +23,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import IntlPhoneInput from "@/components/IntlPhoneInput";
-
+import InitIntlTel from "@/components/InitIntlTel";
 
 export const metadata: Metadata = {
   title: "Técnico Profesional en Operaciones de Comercio Electrónico",
@@ -109,15 +108,14 @@ export default function TecnicoProfesionalPage() {
                                             Teléfono Celular*
                                         </FieldLabel>
                                         <Input className="bg-[#FFFFFF]"
-                                            id="phone"
+                                            id="form-field-phone"
                                             placeholder="310 2345678"
                                             required
-                                            name="phone_e164" 
+                                            type="tel"
                                         />
+                                        <InitIntlTel />
                                     </Field>
-                                    <IntlPhoneInput 
-                                        name="phone_e164"
-                                    />
+
                                 </div>
                                 <div className="grid grid-cols-1 gap-x-4">
                                     <Field>
