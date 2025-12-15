@@ -28,6 +28,11 @@ import { Label } from "@/components/ui/label";
 
 import InitIntlTel from "@/components/InitIntlTel";
 
+import {
+  NativeSelect,
+  NativeSelectOption,
+} from "@/components/ui/native-select";
+
 export const metadata: Metadata = {
   title: "Técnico Profesional en Operaciones de Comercio Electrónico",
   description: "Programa Técnico Profesional en Operaciones de Comercio Electrónico.",
@@ -135,7 +140,10 @@ export default function TecnicoProfesionalPage() {
                                 </div>
                                 <div className="grid grid-cols-1 gap-x-4">
                                     <Field>
-                                        <FieldLabel className="text-white" htmlFor="email">
+                                        <FieldLabel 
+                                            className="text-white" 
+                                            htmlFor="email"
+                                        >
                                             Email*
                                         </FieldLabel>
                                         <Input className="bg-[#FFFFFF]"
@@ -148,27 +156,18 @@ export default function TecnicoProfesionalPage() {
                                 </div>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4">
                                     <Field>
-                                        <Select>
-                                            <FieldLabel className="text-white" htmlFor="tipoDocumento">
-                                            Tipo de documento*
-                                            </FieldLabel>
-                                            <SelectTrigger 
-                                                aria-label="Tipo documento" 
-                                                className="w-[180px] bg-[#FFFFFF]"
-                                                id="tipoDocumento"
-                                            >
-                                                <SelectValue placeholder="Selecciona un tipo de documento" />
-                                            </SelectTrigger>
-                                            <SelectContent>
-                                                <SelectGroup>
-                                                <SelectLabel>Tipo de documento</SelectLabel>
-                                                <SelectItem value="Cédula de ciudadanía">Cédula de ciudadanía</SelectItem>
-                                                <SelectItem value="Tarjeta de identidad">Tarjeta de identidad</SelectItem>
-                                                <SelectItem value="Pasaporte">Cédula de extranjería</SelectItem>
-                                                <SelectItem value="Permiso de Protección Temporal">Permiso de Protección Temporal</SelectItem>
-                                                </SelectGroup>
-                                            </SelectContent>
-                                            </Select>
+                                        <FieldLabel className="text-white" htmlFor="tipoDocumento">
+                                            Tipo de documento
+                                        </FieldLabel>
+                                        <NativeSelect
+                                            className="bg-white"
+                                            id="tipoDocumento"
+                                        >
+                                            <NativeSelectOption value="Cédula de ciudadanía">Cédula de ciudadanía</NativeSelectOption>
+                                            <NativeSelectOption value="Tarjeta de identidad">Tarjeta de identidad</NativeSelectOption>
+                                            <NativeSelectOption value="Cédula de extranjería">Cédula de extranjería</NativeSelectOption>
+                                            <NativeSelectOption value="Permiso de Protección Temporal">Permiso de Protección Temporal</NativeSelectOption>
+                                        </NativeSelect>
                                     </Field>
                                     <Field>
                                         <FieldLabel className="text-white" htmlFor="documento">
