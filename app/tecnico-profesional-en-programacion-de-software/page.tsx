@@ -115,6 +115,19 @@ export default function TecnicoProfesionalPage() {
                                             maxLength={10}
                                             inputMode="tel"
                                             autoComplete="tel"
+                                            onPaste={(e) => {
+                                                // NO bloquear pegar: solo normaliza lo pegado a dígitos
+                                                const text = e.clipboardData.getData("text");
+                                                const cleaned = text.replace(/[^\d]/g, "");
+                                                e.preventDefault();
+
+                                                const el = e.currentTarget;
+                                                const start = el.selectionStart ?? el.value.length;
+                                                const end = el.selectionEnd ?? el.value.length;
+
+                                                el.value = el.value.slice(0, start) + cleaned + el.value.slice(end);
+                                                el.dispatchEvent(new Event("input", { bubbles: true }));
+                                            }}
                                         />
                                         <InitIntlTel />
                                     </Field>
