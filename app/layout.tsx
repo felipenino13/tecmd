@@ -42,7 +42,7 @@ export default function RootLayout({
           src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/84c87fc8-5087-4014-afc7-dd897223b353-loader.js"
           strategy="lazyOnload"
         />
-        <div className="hidden" role="main" id="lead-web-tecmd-tp-en-operacion-de-sistemas-de-informacion-857be07ccccffb03d451"></div><script type="text/javascript" src="https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js"></script><script type="text/javascript"> new RDStationForms('lead-web-tecmd-tp-en-operacion-de-sistemas-de-informacion-857be07ccccffb03d451', 'null').createForm();</script>
+        
       </body>
     </html>
   );

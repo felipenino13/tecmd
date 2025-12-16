@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <h1>Página de inicio TECMD</h1>
       <Link href="/tecnico-profesional-en-programacion-de-software">
-        Técnico Profesional en Programación de Software
+        Técnico Profesional en Programación de Software..
       </Link>
     </>
   );
