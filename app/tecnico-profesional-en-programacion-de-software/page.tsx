@@ -138,6 +138,7 @@ export default function TecnicoProfesionalPage() {
                                             Email*
                                         </FieldLabel>
                                         <Input className="bg-[#FFFFFF]"
+                                            name="email"
                                             type="email"
                                             id="email"
                                             placeholder="email@dominio.com"
