@@ -172,21 +172,21 @@ export default function TecnicoProfesionalPage() {
                                 <div className="grid grid-cols-1 sm:grid-cols-2">
                                     <Field>
                                         <Input
-                                            type="hidden"
+                                            //type="hidden"
                                             id="programa"
                                             value="Programación de Software"
                                         />
                                     </Field>
                                     <Field>
                                         <Input
-                                            type="hidden"
+                                            //type="hidden"
                                             id="medioContanto"
                                             value="whatsapp"
                                         />
                                     </Field>
                                     <Field>
                                         <Input
-                                            type="hidden"
+                                            //type="hidden"
                                             id="financiacion"
                                             value="Tal vez"
                                         />
