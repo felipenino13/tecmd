@@ -150,17 +150,12 @@ export default function TecnicoProfesionalPage() {
                                         <FieldLabel className="text-white" htmlFor="tipoDocumento">
                                             Tipo de documento
                                         </FieldLabel>
-                                        <NativeSelect
-                                            className="bg-white"
-                                            id="tipoDocumento"
-                                            name="tipoDocumento"
-                                            required
-                                        >
-                                            <NativeSelectOption value="Cédula de ciudadanía">Cédula de ciudadanía</NativeSelectOption>
-                                            <NativeSelectOption value="Tarjeta de identidad">Tarjeta de identidad</NativeSelectOption>
-                                            <NativeSelectOption value="Cédula de extranjería">Cédula de extranjería</NativeSelectOption>
-                                            <NativeSelectOption value="Permiso de Protección Temporal">Permiso de Protección Temporal</NativeSelectOption>
-                                        </NativeSelect>
+                                        <select id="tipoDocumento" name="tipoDocumento" className="bg-white file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input h-9 w-full min-w-0 rounded-md border px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-[#FFFFFF]">
+                                            <option value="Cédula de ciudadanía">Cédula de ciudadanía</option>
+                                            <option value="Tarjeta de identidad">Tarjeta de identidad</option>
+                                            <option value="Cédula de extranjería">Cédula de extranjería</option>
+                                            <option value="Permiso de Protección Temporal">Permiso de Protección Temporal</option>
+                                        </select>
                                     </Field>
                                     <Field>
                                         <FieldLabel className="text-white" htmlFor="documento">
@@ -195,13 +190,15 @@ export default function TecnicoProfesionalPage() {
                                             value="Tal vez"
                                         />
                                     </Field>
-                                    <Field className="hidden">
-                                        <Checkbox 
-                                            id="politicas" 
+                                    <Field className="">
+                                        <input
+                                            type="checkbox"
+                                            id="form-field-politicas"
                                             name="form_fields[politicas]"
-                                            defaultChecked
+                                            checked
+                                            readOnly
                                         />
-                                        <Label htmlFor="terms">Accept terms and conditions</Label>
+                                        <label htmlFor="form-field-politicas">Accept terms and conditions</label>
                                     </Field>
                                 </div>
                                 <Button 
