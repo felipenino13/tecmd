@@ -86,7 +86,8 @@ export default function TecnicoProfesionalPage() {
             <div id="formContact">
                 <div className="bg-[#293551] p-10 shadow-md rounded-lg grid gap-y-4">
                     <p className="text-lg text-white text-center font-bold">Solicita más información</p>
-                    <form id="formLanding" action="">
+                    
+                    <form id="formLanding" method="post" name="formGeneral" aria-label="formGeneral">
                         <FieldGroup>
                             <FieldSet className="grid gap-y-3">
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4">
@@ -172,21 +173,21 @@ export default function TecnicoProfesionalPage() {
                                 <div className="grid grid-cols-1 sm:grid-cols-2">
                                     <Field>
                                         <Input
-                                            //type="hidden"
+                                            type="hidden"
                                             id="programa"
                                             value="Programación de Software"
                                         />
                                     </Field>
                                     <Field>
                                         <Input
-                                            //type="hidden"
+                                            type="hidden"
                                             id="medioContanto"
                                             value="whatsapp"
                                         />
                                     </Field>
                                     <Field>
                                         <Input
-                                            //type="hidden"
+                                            type="hidden"
                                             id="financiacion"
                                             value="Tal vez"
                                         />
