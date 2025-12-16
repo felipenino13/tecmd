@@ -87,7 +87,7 @@ export default function TecnicoProfesionalPage() {
                 <div className="bg-[#293551] p-10 shadow-md rounded-lg grid gap-y-4">
                     <p className="text-lg text-white text-center font-bold">Solicita más información</p>
                     
-                    <form id="formLanding" method="post" name="formGeneral" aria-label="formGeneral">
+                    <form id="formLanding" name="formGeneral" aria-label="formGeneral">
                         <FieldGroup>
                             <FieldSet className="grid gap-y-3">
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4">
