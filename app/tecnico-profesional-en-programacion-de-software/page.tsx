@@ -206,6 +206,7 @@ export default function TecnicoProfesionalPage() {
                                 <Button 
                                     className="min-h-[44px] px-4 py-3 text-lg my-1 bg-[#ffc316] hover:bg-[#ffcf45] text-black hover:text-black"
                                     type="submit"
+                                    id="buttonbunji"
                                 >
                                     Solicitar información
                                 </Button>
