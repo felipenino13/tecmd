@@ -24,6 +24,8 @@ import {
   NativeSelectOption,
 } from "@/components/ui/native-select";
 
+import Script from "next/script";
+
 export const metadata: Metadata = {
   title: "Técnico Profesional en Operaciones de Comercio Electrónico",
   description: "Programa Técnico Profesional en Operaciones de Comercio Electrónico.",
@@ -588,6 +590,10 @@ export default function TecnicoProfesionalPage() {
         </div>
     </div>
 
+    <Script
+          src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/84c87fc8-5087-4014-afc7-dd897223b353-loader.js"
+          strategy="lazyOnload"
+        />
     </>
   );
 }
