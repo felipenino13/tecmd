@@ -95,20 +95,24 @@ export default function TecnicoProfesionalPage() {
                                         <FieldLabel className="text-white" htmlFor="name">
                                             Nombre(s)*
                                         </FieldLabel>
-                                        <Input className="bg-[#FFFFFF]"
+                                        <input
                                             id="name"
+                                            type="text"
                                             placeholder="Nombres"
                                             required
+                                            className="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input h-9 w-full min-w-0 rounded-md border px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-[#FFFFFF]"
                                         />
                                     </Field>
                                     <Field>
                                         <FieldLabel className="text-white" htmlFor="apellidos">
                                             Apellido(s)*
                                         </FieldLabel>
-                                        <Input className="bg-[#FFFFFF]"
+                                        <input 
+                                            type="text" 
                                             id="apellidos"
                                             placeholder="Apellidos"
                                             required
+                                            className="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input h-9 w-full min-w-0 rounded-md border px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-[#FFFFFF]"
                                         />
                                     </Field>
                                 </div>
@@ -117,7 +121,7 @@ export default function TecnicoProfesionalPage() {
                                         <FieldLabel className="text-white" htmlFor="phone">
                                             Teléfono Celular*
                                         </FieldLabel>
-                                        <Input className="bg-[#FFFFFF]"
+                                        <input
                                             id="phone"
                                             placeholder="310 2345678"
                                             required
@@ -125,6 +129,7 @@ export default function TecnicoProfesionalPage() {
                                             maxLength={10}
                                             inputMode="tel"
                                             autoComplete="tel"
+                                            className="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input h-9 w-full min-w-0 rounded-md border px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-[#FFFFFF]"
                                         />
                                         <InitIntlTel />
                                     </Field>
@@ -138,9 +143,10 @@ export default function TecnicoProfesionalPage() {
                                         >
                                             Email*
                                         </FieldLabel>
-                                        <Input className="bg-[#FFFFFF]"
+                                        <input 
+                                            type="email" 
+                                            className="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input h-9 w-full min-w-0 rounded-md border px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-[#FFFFFF]" 
                                             name="email"
-                                            type="email"
                                             id="email"
                                             placeholder="email@dominio.com"
                                             required
@@ -163,30 +169,32 @@ export default function TecnicoProfesionalPage() {
                                         <FieldLabel className="text-white" htmlFor="documento">
                                             Número de identificación*
                                         </FieldLabel>
-                                        <Input className="bg-[#FFFFFF]"
+                                        <input 
                                             id="documento"
                                             placeholder="1012345678"
                                             required
+                                            className="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input h-9 w-full min-w-0 rounded-md border px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-[#FFFFFF]"
+                                            maxLength={10}
                                         />
                                     </Field>
                                 </div>
                                 <div className="grid grid-cols-1 sm:grid-cols-2">
                                     <Field>
-                                        <Input
+                                        <input
                                             type="hidden"
                                             id="programa"
                                             value="Programación de Software"
                                         />
                                     </Field>
                                     <Field>
-                                        <Input
+                                        <input
                                             type="hidden"
                                             id="medioContanto"
                                             value="whatsapp"
                                         />
                                     </Field>
                                     <Field>
-                                        <Input
+                                        <input
                                             type="hidden"
                                             id="financiacion"
                                             value="Tal vez"
