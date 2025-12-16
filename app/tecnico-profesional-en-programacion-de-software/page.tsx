@@ -190,7 +190,7 @@ export default function TecnicoProfesionalPage() {
                                             value="Tal vez"
                                         />
                                     </Field>
-                                    <Field className="">
+                                    <Field className="hidden">
                                         <input
                                             type="checkbox"
                                             id="form-field-politicas"
