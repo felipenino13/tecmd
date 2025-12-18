@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
+import WhatsAppDataLayer from "@/components/WhatsAppDataLayer";
 const GTM_ID = "GTM-WXGSBQ9W";
 
 const geistSans = Geist({
@@ -58,8 +59,10 @@ export default function RootLayout({
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
-        
+
         {children}
+
+        <WhatsAppDataLayer />
 
         <Script
           src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/84c87fc8-5087-4014-afc7-dd897223b353-loader.js"
