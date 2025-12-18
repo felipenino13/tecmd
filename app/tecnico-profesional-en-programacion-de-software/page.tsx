@@ -90,8 +90,8 @@ export default function TecnicoProfesionalPage() {
                     <p className="text-lg text-white text-center font-bold">Solicita más información</p>
                     
                     <form id="formLanding" name="formGeneral" aria-label="formGeneral">
-                        <FieldGroup>
-                            <FieldSet className="grid gap-y-3">
+                        <div>
+                            <div className="grid gap-y-3">
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4">
                                     <Field>
                                         <FieldLabel className="text-white" htmlFor="form-field-name">
@@ -160,10 +160,10 @@ export default function TecnicoProfesionalPage() {
                                 </div>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4">
                                     <Field>
-                                        <FieldLabel className="text-white" htmlFor="tipoDocumento">
+                                        <FieldLabel className="text-white" htmlFor="form-field-TipoDeDocumento">
                                             Tipo de documento
                                         </FieldLabel>
-                                        <select id="tipoDocumento" name="tipoDocumento" className="bg-white file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input h-9 w-full min-w-0 rounded-md border px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-[#FFFFFF]">
+                                        <select id="form-field-TipoDeDocumento" name="form_fields[TipoDeDocumento]" className="bg-white file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input h-9 w-full min-w-0 rounded-md border px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-[#FFFFFF]">
                                             <option value="Cédula de ciudadanía">Cédula de ciudadanía</option>
                                             <option value="Tarjeta de identidad">Tarjeta de identidad</option>
                                             <option value="Cédula de extranjería">Cédula de extranjería</option>
@@ -171,12 +171,12 @@ export default function TecnicoProfesionalPage() {
                                         </select>
                                     </Field>
                                     <Field>
-                                        <FieldLabel className="text-white" htmlFor="documento">
+                                        <FieldLabel className="text-white" htmlFor="form-field-NumeroIdentificacion">
                                             Número de identificación*
                                         </FieldLabel>
                                         <input 
-                                            id="documento"
-                                            name="documento"
+                                            id="form-field-NumeroIdentificacion"
+                                            name="form_fields[NumeroIdentificacion]"
                                             placeholder="1012345678"
                                             required
                                             className="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input h-9 w-full min-w-0 rounded-md border px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-[#FFFFFF]"
@@ -186,57 +186,56 @@ export default function TecnicoProfesionalPage() {
                                 </div>
                                 <div className="grid grid-cols-1 sm:grid-cols-2">
                                     <Field className="hidden">
-                                        <FieldLabel className="text-white" htmlFor="programa">
+                                        <FieldLabel className="text-white" htmlFor="form-field-programa">
                                             Programa de interes
                                         </FieldLabel>
                                         <input
-                                            name="programa"
+                                            name="form_fields[programa]"
                                             type="hidden"
-                                            id="programa"
+                                            id="form-field-programa"
                                             value="Programación de Software"
                                         />
                                     </Field>
                                     <Field className="hidden">
-                                        <FieldLabel className="text-white" htmlFor="medioContanto">
+                                        <FieldLabel className="text-white" htmlFor="form-field-MedioContacto">
                                             Medio de contacto
                                         </FieldLabel>
                                         <input
-                                            name="medioContanto"
+                                            name="form_fields[MedioContacto]"
                                             type="hidden"
-                                            id="medioContanto"
+                                            id="form-field-MedioContacto"
                                             value="whatsapp"
                                         />
                                     </Field>
                                     <Field className="hidden">
-                                        <FieldLabel className="text-white" htmlFor="financiacion">
+                                        <FieldLabel className="text-white" htmlFor="form-field-financiacion">
                                             Necesitas financiacion
                                         </FieldLabel>
                                         <input
-                                            name="financiacion"
+                                            name="form_fields[financiacion]"
                                             type="hidden"
-                                            id="financiacion"
+                                            id="form-field-financiacion"
                                             value="Tal vez"
                                         />
                                     </Field>
                                     <Field className="hidden">
                                         <input
                                             type="checkbox"
-                                            id="politicas"
-                                            name="politicas"
+                                            id="form-field-politicas"
+                                            name="form_fields[politicas]"
                                             checked
-                                            readOnly
                                         />
-                                        <label htmlFor="politicas">Accept terms and conditions</label>
+                                        <label htmlFor="form-field-politicas">Accept terms and conditions</label>
                                     </Field>
 
                                 </div>
-                                <Button 
-                                    className="min-h-[44px] px-4 py-3 text-lg my-1 bg-[#ffc316] hover:bg-[#ffcf45] text-black hover:text-black"
+                                <button 
+                                    className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-9 has-[>svg]:px-3 min-h-[44px] px-4 py-3 text-lg my-1 bg-[#ffc316] hover:bg-[#ffcf45] text-black hover:text-black"
                                     type="submit"
                                     id="buttonbunji"
                                 >
                                     Solicitar información
-                                </Button>
+                                </button>
                                 <div>
                                     <p className="text-xs text-center text-white">
                                         Al hacer click en ‘Solicito Información’, autorizo ser contactado para 
@@ -250,8 +249,8 @@ export default function TecnicoProfesionalPage() {
                                         </a>
                                     </p>
                                 </div>
-                            </FieldSet>
-                        </FieldGroup>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
