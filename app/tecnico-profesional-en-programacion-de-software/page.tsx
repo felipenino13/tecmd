@@ -34,6 +34,10 @@ export const metadata: Metadata = {
 export default function TecnicoProfesionalPage() {
   return (
     <>
+    <Script
+          src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/84c87fc8-5087-4014-afc7-dd897223b353-loader.js"
+          strategy="lazyOnload"
+        />
     <div className="bg-[#FFCB29] p-2 z-20">
         <div className="max-w-5xl mx-auto">
             <p className="text-black text-center text-sm">Toma una decisión inTECligente. <strong>Inscríbete hoy y empieza a construir tu futuro</strong></p>
@@ -603,11 +607,6 @@ export default function TecnicoProfesionalPage() {
             </div>
         </div>
     </div>
-
-    <Script
-          src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/84c87fc8-5087-4014-afc7-dd897223b353-loader.js"
-          //strategy="lazyOnload"
-        />
     </>
   );
 }
