@@ -28,8 +28,33 @@ import {
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Técnico Profesional en Operaciones de Comercio Electrónico",
-  description: "Programa Técnico Profesional en Operaciones de Comercio Electrónico.",
+  title: "Técnico Profesional en Programación de Software",
+  description: "Desarrolla código, resuelve problemas y lidera en la transformación social a través del software.",
+  openGraph: {
+    title: "Técnico Profesional en Programación de Software | TecMD",
+    description:
+      "Inscríbete en el Técnico Profesional en Programación de Software. Educación práctica, enfoque laboral y acompañamiento permanente.",
+    url: "https://tecmd.vercel.app/tecnico-profesional-en-programacion-de-software",
+    siteName: "TecMD",
+    images: [
+      {
+        url: "https://tecmd.vercel.app/public/images/Tecnico-Profesional-en-Programacion-de-Software.webp",
+        width: 1200,
+        height: 630,
+        alt: "Técnico Profesional en Programación de Software - TecMD",
+      },
+    ],
+    locale: "es_CO",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Técnico Profesional en Programación de Software | TecMD",
+    description:
+      "Estudia programación de software con enfoque práctico y laboral. Inscripciones abiertas.",
+    images: ["https://tecmd.vercel.app/public/images/Tecnico-Profesional-en-Programacion-de-Software.webp"],
+  },
 };
 
 export default function TecnicoProfesionalPage() {
