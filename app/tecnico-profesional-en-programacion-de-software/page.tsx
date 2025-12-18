@@ -242,7 +242,7 @@ export default function TecnicoProfesionalPage() {
 
     <div className="bg-[#FFC316] px-2 py-20">
         <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-x-20 gap-y-10 bg-[#FFFFFF]">
-            <div className="bg-[url(/images/tp-operaiones-shoftware.webp)] bg-center">
+            <div className="bg-[url(/images/tp-operaiones-shoftware.webp)] bg-center aspect-[16/9]">
 
             </div>
             <div className="content-center grid gap-y-2 p-10">
