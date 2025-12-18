@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { INFO_GENERAL } from "@/data/programas";
 /*import { Spinner } from "@/components/ui/spinner"*/
 import {
   Field,
@@ -98,10 +99,10 @@ export default function TecnicoProfesionalPage() {
                     <p className="text-sm rounded-xl px-2 py-1 border border-white text-white">100% Virtual</p>
                 </div>
                 <p className="text-white text-lg">
-                    $2.560.000 <span className="text-sm">Precio Ministerio de Educación Nacional (MEN)</span>
+                    {INFO_GENERAL.precioMEN.formatted} <span className="text-sm">Precio Ministerio de Educación Nacional (MEN)</span>
                 </p>
                 <p className="text-[#D5A202]">
-                    Matrícula con subsidio: <span className="text-2xl text-white">$1.417.000</span>    
+                    Matrícula con subsidio: <span className="text-2xl text-white">{INFO_GENERAL.matriculaSubsidio.formatted}</span>    
                 </p>
                 <div>
                     <p className="text-sm text-white">
@@ -425,8 +426,8 @@ export default function TecnicoProfesionalPage() {
                 <p className="text-black">
                     ¡Descubre todo lo que tenemos preparado para ti! Accede a una guía 
                     completa que te ayudará a conocer el contenido y la estructura de 
-                    tu formación. ¡No pierdas la oportunidad de empezar a planificar 
-                    tu camino hacia el éxito!
+                    tu formación. <strong>¡No pierdas la oportunidad de empezar a planificar 
+                    tu camino hacia el éxito!</strong>
                 </p>
                 <div className="flex gap-2">
                     <Button className="min-h-[44px] px-4 py-3 text-lg my-2">
