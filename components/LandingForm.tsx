@@ -23,6 +23,15 @@ export default function LandingForm() {
         form.reportValidity(); // muestra mensajes nativos
         return;
     }
+
+    // ✅ 2. Limpia el formulario
+    form.reset();
+
+    // (opcional) asegura que el checkbox quede marcado otra vez
+    const politicas = form.querySelector<HTMLInputElement>(
+        "#form-field-politicas"
+    );
+    if (politicas) politicas.checked = true;
     
     // Aquí puedes hacer tu POST si quieres (opcional)
     // const res = await fetch("/api/lead", { method: "POST" });
