@@ -391,7 +391,7 @@ export default function TecnicoProfesionalPage() {
 
     <div className="bg-[#FFFFFF] px-2 py-20">
         <div className="max-w-5xl mx-auto grid grid-cols-1 gap-x-20 py-4">
-            <h2 className="text-2xl text-black text-xl text-center font-bold">Opciones de financiación</h2>
+            <h2 className="text-2xl text-black text-center font-bold">Opciones de financiación</h2>
         </div>
         <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-x-10 gap-y-10">
             <div className="grid gap-y-2">
