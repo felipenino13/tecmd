@@ -173,6 +173,7 @@ export default function TecnicoProfesionalPage() {
                                         </FieldLabel>
                                         <input 
                                             id="documento"
+                                            name="documento"
                                             placeholder="1012345678"
                                             required
                                             className="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input h-9 w-full min-w-0 rounded-md border px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-[#FFFFFF]"
@@ -182,21 +183,33 @@ export default function TecnicoProfesionalPage() {
                                 </div>
                                 <div className="grid grid-cols-1 sm:grid-cols-2">
                                     <Field>
+                                        <FieldLabel className="text-white" htmlFor="programa">
+                                            Programa de interes
+                                        </FieldLabel>
                                         <input
+                                            name="programa"
                                             type="hidden"
                                             id="programa"
                                             value="Programación de Software"
                                         />
                                     </Field>
                                     <Field>
+                                        <FieldLabel className="text-white" htmlFor="medioContanto">
+                                            Medio de contacto
+                                        </FieldLabel>
                                         <input
+                                            name="medioContanto"
                                             type="hidden"
                                             id="medioContanto"
                                             value="whatsapp"
                                         />
                                     </Field>
                                     <Field>
+                                        <FieldLabel className="text-white" htmlFor="financiacion">
+                                            Necesitas financiacion
+                                        </FieldLabel>
                                         <input
+                                            name="financiacion"
                                             type="hidden"
                                             id="financiacion"
                                             value="Tal vez"
@@ -205,12 +218,12 @@ export default function TecnicoProfesionalPage() {
                                     <Field className="hidden">
                                         <input
                                             type="checkbox"
-                                            id="form-field-politicas"
-                                            name="form_fields[politicas]"
+                                            id="politicas"
+                                            name="politicas"
                                             checked
                                             readOnly
                                         />
-                                        <label htmlFor="form-field-politicas">Accept terms and conditions</label>
+                                        <label htmlFor="politicas">Accept terms and conditions</label>
                                     </Field>
                                 </div>
                                 <Button 
