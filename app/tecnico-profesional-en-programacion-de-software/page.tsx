@@ -34,10 +34,6 @@ export const metadata: Metadata = {
 export default function TecnicoProfesionalPage() {
   return (
     <>
-    <Script
-          src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/84c87fc8-5087-4014-afc7-dd897223b353-loader.js"
-          strategy="lazyOnload"
-        />
     <div className="bg-[#FFCB29] p-2 z-20">
         <div className="max-w-5xl mx-auto">
             <p className="text-black text-center text-sm">Toma una decisión inTECligente. <strong>Inscríbete hoy y empieza a construir tu futuro</strong></p>
@@ -98,11 +94,12 @@ export default function TecnicoProfesionalPage() {
                             <FieldSet className="grid gap-y-3">
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4">
                                     <Field>
-                                        <FieldLabel className="text-white" htmlFor="name">
+                                        <FieldLabel className="text-white" htmlFor="form-field-name">
                                             Nombre(s)*
                                         </FieldLabel>
                                         <input
-                                            id="name"
+                                            name="form-fields[name]"
+                                            id="form-field-name"
                                             type="text"
                                             placeholder="Nombres"
                                             required
@@ -110,12 +107,13 @@ export default function TecnicoProfesionalPage() {
                                         />
                                     </Field>
                                     <Field>
-                                        <FieldLabel className="text-white" htmlFor="apellidos">
+                                        <FieldLabel className="text-white" htmlFor="form-field-apellidos">
                                             Apellido(s)*
                                         </FieldLabel>
                                         <input 
+                                            name="form_fields[apellidos]"
                                             type="text" 
-                                            id="apellidos"
+                                            id="form-field-apellidos"
                                             placeholder="Apellidos"
                                             required
                                             className="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input h-9 w-full min-w-0 rounded-md border px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-[#FFFFFF]"
@@ -124,11 +122,12 @@ export default function TecnicoProfesionalPage() {
                                 </div>
                                 <div className="grid grid-cols-1 gap-x-4">
                                     <Field>
-                                        <FieldLabel className="text-white" htmlFor="phone">
+                                        <FieldLabel className="text-white" htmlFor="form-field-celular">
                                             Teléfono Celular*
                                         </FieldLabel>
                                         <input
-                                            id="phone"
+                                            name="form_fields[celular]"
+                                            id="form-field-celular"
                                             placeholder="310 2345678"
                                             required
                                             type="tel"
