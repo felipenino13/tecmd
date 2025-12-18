@@ -182,7 +182,7 @@ export default function TecnicoProfesionalPage() {
                                     </Field>
                                 </div>
                                 <div className="grid grid-cols-1 sm:grid-cols-2">
-                                    <Field>
+                                    <Field className="hidden">
                                         <FieldLabel className="text-white" htmlFor="programa">
                                             Programa de interes
                                         </FieldLabel>
@@ -193,7 +193,7 @@ export default function TecnicoProfesionalPage() {
                                             value="Programación de Software"
                                         />
                                     </Field>
-                                    <Field>
+                                    <Field className="hidden">
                                         <FieldLabel className="text-white" htmlFor="medioContanto">
                                             Medio de contacto
                                         </FieldLabel>
@@ -204,7 +204,7 @@ export default function TecnicoProfesionalPage() {
                                             value="whatsapp"
                                         />
                                     </Field>
-                                    <Field>
+                                    <Field className="hidden">
                                         <FieldLabel className="text-white" htmlFor="financiacion">
                                             Necesitas financiacion
                                         </FieldLabel>
@@ -225,6 +225,7 @@ export default function TecnicoProfesionalPage() {
                                         />
                                         <label htmlFor="politicas">Accept terms and conditions</label>
                                     </Field>
+
                                 </div>
                                 <Button 
                                     className="min-h-[44px] px-4 py-3 text-lg my-1 bg-[#ffc316] hover:bg-[#ffcf45] text-black hover:text-black"
