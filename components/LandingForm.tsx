@@ -9,37 +9,180 @@ import {
   FieldSet,
 } from "@/components/ui/field";
 
-import React from "react";
 import InitIntlTel from "@/components/InitIntlTel";
 
+import React, { useEffect, useRef, useState } from "react";
+
+type UTMs = Record<string, string>;
+
+async function hashSHA256(texto: string) {
+  const encoder = new TextEncoder();
+  const data = encoder.encode(texto);
+  const hashBuffer = await crypto.subtle.digest("SHA-256", data);
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  return hashArray.map((b) => b.toString(16).padStart(2, "0")).join("");
+}
+
 export default function LandingForm() {
+  const formRef = useRef<HTMLFormElement | null>(null);
+
+  const [utmParams, setUtmParams] = useState<UTMs>({});
+  const [userIP, setUserIP] = useState("");
+  const [countryIP, setCountryIP] = useState("");
+  const [stateIP, setStateIP] = useState("");
+  const [ciudadIP, setCiudadIP] = useState("");
+  const [ispIP, setIspIP] = useState("");
+  const [userAgent, setUserAgent] = useState("");
+
+  // ✅ 1) Capturar UTMs + UserAgent + IP/Geo una sola vez
+  useEffect(() => {
+    // UTMs
+    const urlParams = new URLSearchParams(window.location.search);
+    const obj: UTMs = {};
+    urlParams.forEach((value, key) => (obj[key] = value));
+    setUtmParams(obj);
+
+    // User agent
+    setUserAgent(navigator.userAgent);
+
+    // IP + IPInfo (ojo: requiere que ipinfo permita CORS sin token; si falla, igual seguimos)
+    (async () => {
+      try {
+        const ipRes = await fetch("https://api64.ipify.org?format=json");
+        const ipJson = await ipRes.json();
+        const ip = ipJson.ip;
+        setUserIP(ip);
+
+        const infoRes = await fetch(`https://ipinfo.io/${ip}/json`);
+        const infoJson = await infoRes.json();
+
+        setCountryIP(infoJson.country || "");
+        setStateIP(infoJson.region || "");
+        setCiudadIP(infoJson.city || "");
+        setIspIP(infoJson.org || "");
+      } catch (err) {
+        // No bloqueamos el flujo si falla
+        console.warn("No se pudo obtener IP/Geo:", err);
+      }
+    })();
+  }, []);
+
+  // ✅ 2) Submit: validar HTML + capturar valores + push dataLayer + reset + redirect
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const form = e.currentTarget;
 
-    // 👉 valida HTML5
+    // Validación nativa HTML5
     if (!form.checkValidity()) {
-        form.reportValidity(); // muestra mensajes nativos
-        return;
+      form.reportValidity();
+      return;
     }
 
-    // ✅ 2. Limpia el formulario
+    const fd = new FormData(form);
+
+    // ⚠️ IMPORTANTE:
+    // En tu form tienes nombres mezclados: "form-fields[name]" vs "form_fields[apellidos]" etc.
+    // Aquí pongo ambas posibilidades para que no se te rompa.
+    const get = (keyA: string, keyB?: string) => {
+      const v =
+        (fd.get(keyA) as string | null) ??
+        (keyB ? ((fd.get(keyB) as string | null) ?? "") : "");
+      return (v || "").toString().trim();
+    };
+
+    const data = {
+      name: get("form_fields[name]", "form-fields[name]"),
+      lastName: get("form_fields[apellidos]", "form_fields[apellidos]"),
+      phone: get("form_fields[celular]"),
+      email: get("email", "form_fields[email]"), // tu email es name="email"
+      program: get("form_fields[programa]"),
+      documentType: get("form_fields[TipoDeDocumento]"),
+      documento: get("form_fields[NumeroIdentificacion]"),
+      medioContacto: get("form_fields[MedioContacto]"),
+      financiacion: get("form_fields[financiacion]"),
+    };
+
+    // Validación “dura” como en tu script
+    if (
+      !data.name ||
+      !data.lastName ||
+      !data.phone ||
+      !data.email ||
+      !data.program ||
+      !data.documentType ||
+      !data.documento ||
+      !data.medioContacto ||
+      !data.financiacion
+    ) {
+      return;
+    }
+
+    // Hash para Meta (como tu script)
+    const [nombreHash, apellidoHash, telefonoHash, emailHash] =
+      await Promise.all([
+        hashSHA256(data.name),
+        hashSHA256(data.lastName),
+        hashSHA256(data.phone),
+        hashSHA256(data.email),
+      ]);
+
+    // dataLayer push
+    (window as any).dataLayer = (window as any).dataLayer || [];
+    (window as any).dataLayer.push({
+      event: "formSubmission",
+      nombre: data.name,
+      apellido: data.lastName,
+      telefono: data.phone,
+      email: data.email,
+      programa: data.program,
+      documentType: data.documentType,
+      documento: data.documento,
+      medioContacto: data.medioContacto,
+      financiacion: data.financiacion,
+
+      // UTMs
+      utm_campaign: utmParams.utm_campaign,
+      utm_content: utmParams.utm_content,
+      utm_device: utmParams.utm_device,
+      utm_matchtype: utmParams.utm_matchtype,
+      utm_medium: utmParams.utm_medium,
+      utm_source: utmParams.utm_source,
+      utm_term: utmParams.utm_term,
+      Code_Id: utmParams.Code_Id,
+      adposition: utmParams.adposition,
+      creative_id: utmParams.creative_id,
+      network: utmParams.network,
+
+      // IP / navegador
+      formIp: userIP,
+      formNavegador: userAgent,
+      formCountryIP: countryIP,
+      formStateIP: stateIP,
+      formCiudadIP: ciudadIP,
+      formIspIP: ispIP,
+
+      // Si tienes esto en localStorage/memory, aquí lo conectas
+      // leadsource: usuarioRecuperado?.leadSourceMemory,
+
+      // Hashes
+      nombreMeta: nombreHash,
+      apellidoMeta: apellidoHash,
+      telefonoMeta: telefonoHash,
+      emailMeta: emailHash,
+    });
+
+    // Limpiar form antes de redirigir
     form.reset();
 
-    // (opcional) asegura que el checkbox quede marcado otra vez
-    const politicas = form.querySelector<HTMLInputElement>(
-        "#form-field-politicas"
-    );
+    // Si quieres que quede marcado:
+    const politicas = form.querySelector<HTMLInputElement>("#form-field-politicas");
     if (politicas) politicas.checked = true;
-    
-    // Aquí puedes hacer tu POST si quieres (opcional)
-    // const res = await fetch("/api/lead", { method: "POST" });
 
+    // Redirect (deja un pequeño delay para que GTM alcance a leer el push)
     setTimeout(() => {
-        window.location.href = "https://tecmd.edu.co/pagina-gracias-registro/";
-    }, 1000);
-    // Redirección
+      window.location.href = "https://tecmd.edu.co/pagina-gracias-registro/";
+    }, 600);
   };
 
   return (
