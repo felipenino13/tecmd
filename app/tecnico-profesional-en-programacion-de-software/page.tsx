@@ -4,7 +4,7 @@ import Image from "next/image";
 
 import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
-import { INFO_GENERAL } from "@/data/programas";
+import { INFO_GENERAL } from "@/data/general";
 
 import ModuleSubsidio from "@/components/ModuleSubsidio";
 import ModulePInscripcion from "@/components/ModulePInscripcion";
