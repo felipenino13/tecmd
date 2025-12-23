@@ -5,6 +5,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import { INFO_GENERAL } from "@/data/general";
+import { PROGRAMAS } from "@/data/programas";
 
 import ModuleSubsidio from "@/components/ModuleSubsidio";
 import ModulePInscripcion from "@/components/ModulePInscripcion";
@@ -98,7 +99,9 @@ export default function TecnicoProfesionalPage() {
             <div id="formContact">
                 <div className="bg-[#293551] p-10 shadow-md rounded-lg grid gap-y-4">
                     <p className="text-lg text-white text-center font-bold">Solicita más información</p>
-                    <LandingForm />
+                    <LandingForm 
+                        programaTitle= "Programación de Software"
+                    />
                 </div>
             </div>
         </div>

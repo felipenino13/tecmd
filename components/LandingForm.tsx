@@ -14,6 +14,10 @@ import InitIntlTel from "@/components/InitIntlTel";
 
 import React, { useEffect, useRef, useState } from "react";
 
+type LandingFormProps = {
+  programaTitle: string;
+};
+
 type UTMs = Record<string, string>;
 
 async function hashSHA256(texto: string) {
@@ -24,7 +28,7 @@ async function hashSHA256(texto: string) {
   return hashArray.map((b) => b.toString(16).padStart(2, "0")).join("");
 }
 
-export default function LandingForm() {
+export default function LandingForm({ programaTitle }: LandingFormProps) {
   const formRef = useRef<HTMLFormElement | null>(null);
 
   const [utmParams, setUtmParams] = useState<UTMs>({});
@@ -291,7 +295,7 @@ export default function LandingForm() {
                             name="form_fields[programa]"
                             type="hidden"
                             id="form-field-programa"
-                            value="Programación de Software"
+                            value={programaTitle}
                         />
                     </Field>
                     <Field className="hidden">

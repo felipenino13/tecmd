@@ -6,6 +6,9 @@ import ModuleTop from "@/components/ModuleTop";
 import LandingForm from "@/components/LandingForm";
 import { INFO_GENERAL } from "@/data/general";
 
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+
 import ModuleSubsidio from "@/components/ModuleSubsidio";
 import ModulePInscripcion from "@/components/ModulePInscripcion";
 import ModuleFinanciacion from "@/components/ModuleFinanciacion";
@@ -140,7 +143,9 @@ export default async function ProgramaPage({ params }: Props) {
             <div id="formContact">
                 <div className="bg-[#293551] p-10 shadow-md rounded-lg grid gap-y-4">
                     <p className="text-lg text-white text-center font-bold">Solicita más información</p>
-                    <LandingForm />
+                    <LandingForm 
+                      programaTitle={programa.valueProgram}
+                    />
                 </div>
             </div>
         </div>
@@ -181,11 +186,118 @@ export default async function ProgramaPage({ params }: Props) {
 
     <ModuleSubsidio />
 
+    <div className="bg-[#FFFFFF] px-2 py-20">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-x-20 gap-y-10">
+            <div className="content-center grid gap-y-2">
+                <h2 className="text-2xl text-black font-bold">¿Qué lograrás con esta formación?</h2>
+                {programa.queLograras.length > 0 &&(
+                  <ul className="pl-5 text-black text-sm list-image-[url(/icons/check-icon.svg)]">
+                    {programa.queLograras.map((logro, index) =>(
+                      <li>
+                        {logro}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+
+                <p className="text-black">
+                    <b>¡No te quedes atrás en la era digital!</b>
+                </p>
+                <div>
+                    <Button className="min-h-[44px] px-4 py-3 text-lg my-2">
+                        <Link href="#formContact">
+                            Solicita más información
+                        </Link>
+                    </Button>
+                </div>
+            </div>
+            <div className="relative">
+                <div>
+                    <Image
+                    src="/images/student-tecmd.jpg"   // ruta relativa a /public
+                    alt="Estudiantes del programa técnico profesional en operaciones de comercio electrónico"
+                    width={560}            // ancho real de la imagen
+                    height={300}            // alto real de la imagen
+                    />
+                </div>
+                <div className="absolute bottom-0 left-0 m-5 p-5 max-w-2xs grid gap-y-2 bg-white/50 backdrop-blur-md">
+                    {programa.lograrasDescripcion && (
+                      <p className="text-black text-sm">
+                        {programa.lograrasDescripcion}
+                      </p>
+                    )}
+                    <p className="text-black text-sm">
+                        <b>¡Inscríbete ahora y toma una decisión inTECligente para 
+                        asegurar tu futuro!</b>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div className="bg-[#FFC316] px-2 py-20">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-x-20 gap-y-10 bg-[#FFFFFF]">
+            <div className="bg-[url(/images/tp-operaiones-shoftware.webp)] bg-center aspect-[16/9]">
+
+            </div>
+            <div className="content-center grid gap-y-2 p-10">
+                <h2 className="text-2xl text-black font-bold">Podrás desempeñarte como:</h2>
+                {programa.trabajaComo.length > 0 &&(
+                  <ul className="pl-5 text-black text-sm list-image-[url(/icons/check-icon.svg)]">
+                    {programa.trabajaComo.map((trabajo, index) =>(
+                      <li>
+                        {trabajo}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+
+            </div>
+        </div>
+    </div>
+
     <ModuleBeneficios />
 
     <ModulePInscripcion />
 
     <ModuleFinanciacion />
+
+    <div className="bg-[#FFCB29] px-2 py-20">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-x-20 gap-y-10">
+            <div className="content-center grid gap-y-2">
+                <h2 className="text-2xl text-black font-bold">Plan de estudios</h2>
+                <p className="text-black">
+                    ¡Descubre todo lo que tenemos preparado para ti! Accede a una guía 
+                    completa que te ayudará a conocer el contenido y la estructura de 
+                    tu formación. <strong>¡No pierdas la oportunidad de empezar a planificar 
+                    tu camino hacia el éxito!</strong>
+                </p>
+                <div className="flex gap-2">
+                    <Button className="min-h-[44px] px-4 py-3 text-lg my-2">
+                        <Link href="#formContact">
+                            Más información
+                        </Link>
+                    </Button>
+                    <Button className="min-h-[44px] px-4 py-3 text-lg my-2" variant="outline">
+                        <a 
+                        download="TecMD Programación-de-Software.pdf"
+                        href={programa.planEstudio}
+                        >
+                            Plan de estudios
+                        </a>
+                    </Button>
+                </div>
+            </div>
+            <div>
+                <Image
+                src="/images/Buho-circulo.png"   // ruta relativa a /public
+                alt="Estudiantes del programa técnico profesional en operaciones de comercio electrónico"
+                width={500}            // ancho real de la imagen
+                height={300}            // alto real de la imagen
+                /> 
+            </div>
+        </div>
+    </div>
 
     <ModuleFooter />
     </>
