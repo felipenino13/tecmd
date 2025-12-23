@@ -25,8 +25,8 @@ export default function Home() {
       </div>
       <div className="bg-[#212844] p-2 z-20 pb-20">
         <div className="max-w-5xl mx-auto">
-          <Link className="text-[#ffc316] underline" href="/tecnico-profesional-en-programacion-de-software">
-            Técnico Profesional en Programación de Software
+          <Link className="text-[#ffc316] underline" href="/programas">
+            Ver todos los programas
           </Link>
         </div>
       </div>

@@ -162,9 +162,12 @@ export default async function ProgramaPage({ params }: Props) {
                   </h2>
                 )}
                 {programa.descripcionLarga && (
-                  <p className="text-black">
-                    {programa.descripcionLarga}
-                  </p>
+                  <p 
+                    className="text-black" 
+                    dangerouslySetInnerHTML={{
+                    __html: programa.descripcionLarga,
+                    }}
+                  />
                 )}
             </div>
             <div>
@@ -280,7 +283,7 @@ export default async function ProgramaPage({ params }: Props) {
                     </Button>
                     <Button className="min-h-[44px] px-4 py-3 text-lg my-2" variant="outline">
                         <a 
-                        download="TecMD Programación-de-Software.pdf"
+                        download={"TecMD "+programa.title+".pdf"}
                         href={programa.planEstudio}
                         >
                             Plan de estudios
