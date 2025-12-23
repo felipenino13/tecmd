@@ -77,7 +77,7 @@ export default async function ProgramaPage({ params }: Props) {
             sizes="(max-width: 768px) 100vw, 1200px"
             className="object-cover"
         />
-        <div className="bg-[#212844]/50 backdrop-blur-lg px-2 py-20">
+        <div className="bg-[#212844]/75 backdrop-blur-lg px-2 py-20">
             <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-x-20 gap-y-10">
             <div className="grid gap-y-4 content-center">
                 <div>
@@ -90,7 +90,7 @@ export default async function ProgramaPage({ params }: Props) {
                     />
                 </div>
                 <div>
-                    <h1 className="text-5xl text-white">{programa.title}</h1>
+                    <h1 className="text-5xl text-white pb-3">{programa.title}</h1>
                     <p className="text-base text-white">{programa.description}</p>
                 </div>
                 <div className="flex gap-2">

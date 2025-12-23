@@ -1,5 +1,6 @@
 import { Button } from "./ui/button";
 import Link from "next/link";
+import { CircleDollarSign } from "lucide-react";
 
 export default function ModuleFinanciacion(){
     return(
@@ -18,7 +19,7 @@ export default function ModuleFinanciacion(){
                     <p className="text-black text-center">Gracias a Credity, puedes comenzar tu Técnico Profesional pagando menos de $500.000​.​</p>
                 </div>
                 <div className="grid gap-y-2">
-                    <p className="text-6xl text-black text-center">3</p>
+                    <p className="text-6xl text-black text-center flex m-auto">3 <CircleDollarSign className="w-[1em] h-[1em]"/></p>
                     <p className="text-black text-center">Si necesitas financiar el saldo, tenemos tres aliados confiables con opciones flexibles.​​</p>
                 </div>
             </div>
