@@ -171,6 +171,60 @@ export const PROGRAMAS: Programa[] = [
     ],
   }),
 
+  makePrograma({
+  title: "Técnico Profesional en Procesos de Mercadeo Digital",
+  valueProgram: "Procesos de Mercadeo Digital",
+  description:
+    "Impulsa marcas en el mundo digital creando estrategias de mercadeo efectivas.",
+  heroImage:
+    "/images/tecnico-profesional-en-procesos-de-mercadeo-digital.webp",
+  codigoSNIES: "",
+  resolucion: "",
+  vigenciaRegistro: "Vigencia Registro Calificado 7 años",
+  periodos: "4",
+  creditos: "65",
+  modalidad: "100% Virtual",
+  planEstudio:
+    "/pdfs/FLYER-ACADEMICO-2024-Procesos-de-Mercadeo-Digital.pdf",
+  tituloDescripcion:
+    "El futuro es digital, conviértete en Técnico Profesional en Procesos de Mercadeo Digital",
+  descripcionLarga: `
+    El crecimiento del mercado digital exige profesionales capaces de crear,
+    ejecutar y analizar estrategias de mercadeo en entornos digitales.
+    El programa Técnico Profesional en Procesos de Mercadeo Digital te forma
+    para apoyar la planeación, ejecución y evaluación de campañas digitales,
+    fortaleciendo la visibilidad de marcas y productos en diferentes canales.
+    <strong>
+      Aprenderás a desarrollar contenidos digitales, gestionar redes sociales,
+      analizar métricas y apoyar procesos de publicidad digital orientados a
+      resultados.
+    </strong>
+  `,
+  porqueEstudiar: [
+    "Alta demanda en el mercado laboral por la digitalización de las empresas.",
+    "Desarrollo de habilidades en estrategias digitales y marketing online.",
+    "Oportunidades de empleo en distintos sectores económicos.",
+    "Formación práctica y actualizada en mercadeo digital.",
+  ],
+  queLograras: [
+    "Desarrollar estrategias de mercadeo digital alineadas a objetivos empresariales.",
+    "Gestionar contenidos para redes sociales y plataformas digitales.",
+    "Apoyar la ejecución de campañas de publicidad digital.",
+    "Analizar métricas y resultados para la toma de decisiones.",
+  ],
+  lograrasDescripcion:
+    "Conviértete en Técnico Profesional en Procesos de Mercadeo Digital y prepárate para ingresar al mundo laboral con competencias digitales altamente demandadas.",
+  trabajaComo: [
+    "Asistente de mercadeo digital.",
+    "Gestor de redes sociales.",
+    "Auxiliar de publicidad digital.",
+    "Community manager.",
+    "Asistente de marketing.",
+    "Emprendedor digital.",
+  ],
+}),
+
+
 
 
 ];
