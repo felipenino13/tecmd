@@ -2,11 +2,11 @@
 
 export const INFO_GENERAL = {
   precioMEN: {
-    value: 2560000,
-    formatted: "$2.560.000",
+    value: 2701000,
+    formatted: "$2.701.000",
   },
   matriculaSubsidio: {
-    value: 1417000,
-    formatted: "$1.417.000",
+    value: 1486000,
+    formatted: "$1.486.000",
   }
 };
