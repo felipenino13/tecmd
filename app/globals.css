@@ -3,7 +3,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@import "intl-tel-input/build/css/intlTelInput.css";
+/*@import "intl-tel-input/build/css/intlTelInput.css";*/
 
 @theme inline {
   --color-background: var(--background);

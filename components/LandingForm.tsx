@@ -8,6 +8,7 @@ import {
   FieldSeparator,
   FieldSet,
 } from "@/components/ui/field";
+import "intl-tel-input/build/css/intlTelInput.css";
 /*import { Spinner } from "@/components/ui/spinner"*/
 
 import InitIntlTel from "@/components/InitIntlTel";

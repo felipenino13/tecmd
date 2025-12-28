@@ -27,7 +27,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      {/* ✅ GTM */}
+      <head>
+        {/* Preload LCP */}
+        <link
+          rel="preload"
+          as="image"
+          href="/images/Tecnico-Profesional-en-Programacion-de-Software.webp"
+          fetchPriority="high"
+        />
+
+        {/* ✅ GTM */}
         <Script
           id="gtm"
           strategy="afterInteractive"
@@ -40,13 +49,6 @@ export default function RootLayout({
               })(window,document,'script','dataLayer','${GTM_ID}');
             `,
           }}
-        />
-      <head>
-        <link
-          rel="preload"
-          as="image"
-          href="/images/Tecnico-Profesional-en-Programacion-de-Software.webp"
-          fetchPriority="high"
         />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
