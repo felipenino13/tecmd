@@ -76,6 +76,7 @@ export default async function ProgramaPage({ params }: Props) {
             priority
             sizes="(max-width: 768px) 100vw, 1200px"
             className="object-cover"
+            fetchPriority="high"
         />
         <div className="bg-[#212844]/75 backdrop-blur-lg px-2 py-20">
             <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-x-20 gap-y-10">
