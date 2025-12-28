@@ -177,7 +177,7 @@ export default async function ProgramaPage({ params }: Props) {
                     {programa.porqueEstudiar.length > 0 &&(
                       <ul className="pl-5 text-black text-sm list-image-[url(/icons/check-icon.svg)]">
                         {programa.porqueEstudiar.map((beneficio, index) =>  (
-                          <li>
+                          <li key={index}>
                             {beneficio}
                           </li>
                         ))}
@@ -197,7 +197,7 @@ export default async function ProgramaPage({ params }: Props) {
                 {programa.queLograras.length > 0 &&(
                   <ul className="pl-5 text-black text-sm list-image-[url(/icons/check-icon.svg)]">
                     {programa.queLograras.map((logro, index) =>(
-                      <li>
+                      <li key={index}>
                         {logro}
                       </li>
                     ))}
@@ -249,7 +249,7 @@ export default async function ProgramaPage({ params }: Props) {
                 {programa.trabajaComo.length > 0 &&(
                   <ul className="pl-5 text-black text-sm list-image-[url(/icons/check-icon.svg)]">
                     {programa.trabajaComo.map((trabajo, index) =>(
-                      <li>
+                      <li key={index}>
                         {trabajo}
                       </li>
                     ))}
