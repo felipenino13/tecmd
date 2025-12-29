@@ -1,14 +1,8 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 import WhatsAppDataLayer from "@/components/WhatsAppDataLayer";
 const GTM_ID = "GTM-WXGSBQ9W";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -48,7 +42,7 @@ export default function RootLayout({
       </head>
       <body 
         suppressHydrationWarning
-        className={`${geistSans.variable} antialiased`}>
+        >
         {/* ✅ GTM (noscript) */}
         <noscript>
           <iframe
