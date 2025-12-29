@@ -85,7 +85,7 @@ export default async function ProgramaPage({ params }: Props) {
             <div className="grid gap-y-4 content-center">
                 <div>
                     <Image
-                        src="/logos/logos-TEC-MD-yellow_pq.png"   // ruta relativa a /public
+                        src="/logos/logos-TEC-MD-yellow_pq.webp"   // ruta relativa a /public
                         alt={programa.title}
                         width={160}            // ancho real de la imagen
                         height={95.41}            // alto real de la imagen
