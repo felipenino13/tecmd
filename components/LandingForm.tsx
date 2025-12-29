@@ -65,7 +65,7 @@ export default function LandingForm({ programaTitle }: LandingFormProps) {
       } catch (err) {
         // No bloqueamos el flujo si falla
         console.warn("No se pudo obtener IP/Geo:", err);
-      }
+      };
     })();
   }, []);
 

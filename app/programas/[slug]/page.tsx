@@ -3,7 +3,9 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { PROGRAMAS } from "@/data/programas";
 import ModuleTop from "@/components/ModuleTop";
-import LandingForm from "@/components/LandingForm";
+
+import LandingFormClient from "@/components/LandingFormClient";
+
 import { INFO_GENERAL } from "@/data/general";
 
 import { Button } from "@/components/ui/button";
@@ -144,8 +146,8 @@ export default async function ProgramaPage({ params }: Props) {
             <div id="formContact">
                 <div className="bg-[#293551] p-10 shadow-md rounded-lg grid gap-y-4">
                     <p className="text-lg text-white text-center font-bold">Solicita más información</p>
-                    <LandingForm 
-                      programaTitle={programa.valueProgram}
+                    <LandingFormClient 
+                      programaTitle={programa.title} 
                     />
                 </div>
             </div>
