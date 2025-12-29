@@ -1,10 +1,7 @@
 "use client";
 
-import React, { useEffect, useMemo, useRef, useState, useCallback } from "react";
+import React, { useEffect, useRef, useState, useCallback } from "react";
 import { Field, FieldLabel } from "@/components/ui/field";
-
-// ✅ Import CSS aquí (NO en globals.css) para que sea route-level
-import "intl-tel-input/build/css/intlTelInput.css";
 
 // ✅ Import dinámico del JS (evita cargarlo antes de tiempo y reduce reflows)
 type LandingFormProps = { programaTitle: string };
@@ -32,7 +29,6 @@ function runWhenIdle(fn: () => void) {
 
 export default function LandingForm({ programaTitle }: LandingFormProps) {
   const formRef = useRef<HTMLFormElement | null>(null);
-  const phoneRef = useRef<HTMLInputElement | null>(null);
 
   const [utmParams, setUtmParams] = useState<UTMs>({});
   const [userIP, setUserIP] = useState("");
@@ -79,41 +75,6 @@ export default function LandingForm({ programaTitle }: LandingFormProps) {
     });
 
     return () => cancel?.();
-  }, []);
-
-  // ✅ 2) Init intl-tel-input sin querySelector y diferido al siguiente frame
-  useEffect(() => {
-    if (!phoneRef.current) return;
-
-    let iti: any = null;
-    let cancelled = false;
-
-    const raf = requestAnimationFrame(() => {
-      // Import dinámico del JS para no meterlo en el bundle inicial
-      import("intl-tel-input")
-        .then((mod: any) => {
-          if (cancelled || !phoneRef.current) return;
-          const intlTelInput = mod.default ?? mod;
-
-          iti = intlTelInput(phoneRef.current, {
-            // Ajusta si lo necesitas
-            initialCountry: "co",
-            nationalMode: true,
-            separateDialCode: true,
-          });
-        })
-        .catch((e) => console.warn("intl-tel-input init failed:", e));
-    });
-
-    return () => {
-      cancelled = true;
-      cancelAnimationFrame(raf);
-      try {
-        iti?.destroy?.();
-      } catch {
-        // ignore
-      }
-    };
   }, []);
 
   const getFromFormData = useCallback((fd: FormData, keyA: string, keyB?: string) => {
@@ -269,18 +230,30 @@ export default function LandingForm({ programaTitle }: LandingFormProps) {
               <FieldLabel className="text-white" htmlFor="form-field-celular">
                 Teléfono Celular*
               </FieldLabel>
+              <div className="h-9 flex items-stretch w-full rounded-md border border-input bg-white overflow-hidden">
+                <div className="flex items-center gap-2 px-3 border-r border-input bg-white">
+                  <img src="/icons/flag-co.webp" alt="Colombia" width={18} height={18} loading="lazy" />
+                  <span className="text-sm font-medium text-black">+57</span>
+                </div>
               <input
-                ref={phoneRef}
                 name="form_fields[celular]"
                 id="form-field-celular"
                 placeholder="310 2345678"
                 required
                 type="tel"
                 maxLength={10}
-                inputMode="tel"
-                autoComplete="tel"
-                className="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input h-9 w-full min-w-0 rounded-md border px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-[#FFFFFF]"
+                inputMode="numeric"
+                autoComplete="tel-national"
+                pattern="^[0-9]{10}$"
+                title="Escribe 10 dígitos (Ej: 3102345678)"
+                className="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 h-9 w-full min-w-0 rounded-md px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-[#FFFFFF]"
+                onInput={(e) => {
+                    const el = e.currentTarget;
+                    el.value = el.value.replace(/\D/g, "").slice(0, 10);
+                  }}
               />
+              </div>
+              
             </Field>
           </div>
 
