@@ -1,11 +1,11 @@
 @import "tailwindcss";
 /*@import "tw-animate-css";*/
 
-@custom-variant dark (&:is(.dark *));
+/*@custom-variant dark (&:is(.dark *));*/
 
 /*@import "intl-tel-input/build/css/intlTelInput.css";*/
 
-@theme inline {
+/*@theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -43,7 +43,7 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-}
+}*/
 
 :root {
   --radius: 0.625rem;
@@ -118,11 +118,11 @@
   width: 100% !important;
 }
 
-@layer base {
+/*@layer base {
   * {
     @apply border-border outline-ring/50;
   }
   body {
     @apply bg-background text-foreground;
   }
-}
+}*/
