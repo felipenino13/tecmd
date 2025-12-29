@@ -77,7 +77,7 @@ export default async function ProgramaPage({ params }: Props) {
             fill
             priority
             sizes="(max-width: 768px) 100vw, 1200px"
-            className="object-cover"
+            className="object-cover hidden sm:block"
             fetchPriority="high"
             quality={65}
         />
