@@ -208,7 +208,7 @@ export default async function ProgramaPage({ params }: Props) {
                     <b>¡No te quedes atrás en la era digital!</b>
                 </p>
                 <div>
-                    <Button className="min-h-[44px] px-4 py-3 text-lg my-2">
+                    <Button className="min-h-[44px] px-4 py-3 text-lg my-2 bg-[#1A3C69] text-white">
                         <Link href="#formContact">
                             Solicita más información
                         </Link>
@@ -277,7 +277,7 @@ export default async function ProgramaPage({ params }: Props) {
                     tu camino hacia el éxito!</strong>
                 </p>
                 <div className="flex gap-2">
-                    <Button className="min-h-[44px] px-4 py-3 text-lg my-2">
+                    <Button className="min-h-[44px] px-4 py-3 text-lg my-2 bg-[#1A3C69] text-white">
                         <Link href="#formContact">
                             Más información
                         </Link>

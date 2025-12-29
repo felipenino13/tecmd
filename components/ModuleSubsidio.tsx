@@ -24,7 +24,7 @@ export default function ModuleSubsidio() {
                         las personas pueden acceder a ella.
                     </p>
                     <div>
-                        <Button className="min-h-[44px] px-4 py-3 text-lg my-2">
+                        <Button className="min-h-[44px] px-4 py-3 text-lg my-2 bg-[#1A3C69] text-white">
                             <Link href="#formContact">
                                 Accede a este subsidio
                             </Link>

@@ -25,7 +25,7 @@ export default function ModuleFinanciacion(){
             </div>
             <div className="max-w-5xl mx-auto grid grid-cols-1 gap-x-20 py-4">
                 <div className="justify-center flex">
-                        <Button className="min-h-[44px] px-4 py-3 text-lg my-2">
+                        <Button className="min-h-[44px] px-4 py-3 text-lg my-2 bg-[#1A3C69] text-white">
                             <Link href="#formContact">
                                 ¿Quieres saber más? Empieza hoy
                             </Link>
